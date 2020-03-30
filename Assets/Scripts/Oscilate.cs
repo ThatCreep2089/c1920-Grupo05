@@ -43,8 +43,6 @@ public class Oscilate : MonoBehaviour
 
 	void Update()
 	{
-		
-
 		if (temp > 0)
 		{
 			if (nextPos == finalPos)//Bajar
@@ -70,6 +68,9 @@ public class Oscilate : MonoBehaviour
 				temp = interpTime + addTime;
 			}
 		}
+		//Para no alterar el BoxCollider de deteccion del hacha.
+		GameObject hijo = GetComponentInChildren<RangoV>().gameObject;
+			hijo.transform.rotation = Quaternion.Euler(0, 0, 0);
 	}
 	#endregion
 }

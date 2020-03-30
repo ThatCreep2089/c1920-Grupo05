@@ -3,7 +3,6 @@
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public Transform playerTrans;
     private void Awake()
     {
         //Cosa que viene en los apuntes para que el gamemanager no se destruya entre escenas

@@ -27,9 +27,6 @@ public class PlayerMovement : MonoBehaviour
 	{
 		rbParent = gameObject.GetComponentInParent<Rigidbody2D>();
 		parent = transform.parent;
-
-        //Se comunica con el GameManager para hacerle saber que este objeto es el jugador
-        GameManager.instance.playerTrans = this.transform;
 	}
 
 	void Update()
