@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7831409834271638954}
   - component: {fileID: 63475350683117501}
   - component: {fileID: 7193534449723325390}
+  - component: {fileID: 236357382033473997}
   m_Layer: 9
   m_Name: VasijaPrefab
   m_TagString: Untagged
@@ -142,3 +143,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6, y: 2.2}
   m_EdgeRadius: 0
+--- !u!114 &236357382033473997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67356138402446165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7367c4fe7cf00d46a3ff2549a1cc3af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PowerUp: {fileID: 2144757585097190251, guid: 8a0edad3b9a87734480b217abe02f04f, type: 3}

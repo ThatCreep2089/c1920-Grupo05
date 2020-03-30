@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{DE8705AD-E103-DEB1-1238-C4893941E48B}</ProjectGuid>
+    <ProjectGuid>{FFDC6C35-4019-8D81-332B-931E6C1C33A5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -62,66 +62,67 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\QuitGame.cs" />
     <Compile Include="Assets\Scripts\CamMovement.cs" />
     <Compile Include="Assets\Scripts\Danyo.cs" />
     <Compile Include="Assets\Scripts\DestroyOncollision.cs" />
     <Compile Include="Assets\Scripts\Disparar.cs" />
-    <Compile Include="Assets\Scripts\Dragon.cs" />
-    <Compile Include="Assets\Scripts\Enemigos\Armadura\Arma.cs" />
-    <Compile Include="Assets\Scripts\Enemigos\Armadura\ArmaCollider.cs" />
-    <Compile Include="Assets\Scripts\Enemigos\Armadura\ArmaduraDorada.cs" />
-    <Compile Include="Assets\Scripts\Enemigos\Ataques.cs" />
-    <Compile Include="Assets\Scripts\Enemigos\EnemigoHaciaPla.cs" />
-    <Compile Include="Assets\Scripts\Enemigos\Gluplosive\Explosion.cs" />
-    <Compile Include="Assets\Scripts\Enemigos\GotaOro\GotaOro.cs" />
-    <Compile Include="Assets\Scripts\Enemigos\Greedy\DisparoEnemigo.cs" />
-    <Compile Include="Assets\Scripts\Enemigos\Mimico\DanyoMimico.cs" />
-    <Compile Include="Assets\Scripts\Enemigos\Murcielago\Murcielago.cs" />
-    <Compile Include="Assets\Scripts\Enemigos\RangoV.cs" />
-    <Compile Include="Assets\Scripts\Enemigos\Serpiente\ArmaSerpiente.cs" />
-    <Compile Include="Assets\Scripts\Enemigos\Serpiente\HurtBoxSerpiente.cs" />
+    <Compile Include="Assets\Scripts\EnemigosScripts\ArmaduraScripts\Arma.cs" />
+    <Compile Include="Assets\Scripts\EnemigosScripts\ArmaduraScripts\ArmaCollider.cs" />
+    <Compile Include="Assets\Scripts\EnemigosScripts\ArmaduraScripts\ArmaduraDorada.cs" />
+    <Compile Include="Assets\Scripts\EnemigosScripts\Ataques.cs" />
+    <Compile Include="Assets\Scripts\EnemigosScripts\EnemigoHaciaPla.cs" />
+    <Compile Include="Assets\Scripts\EnemigosScripts\GluplosiveScripts\Explosion.cs" />
+    <Compile Include="Assets\Scripts\EnemigosScripts\GreedyScripts\DisparoEnemigo.cs" />
+    <Compile Include="Assets\Scripts\EnemigosScripts\MurciélagoScripts\Murcielago.cs" />
+    <Compile Include="Assets\Scripts\EnemigosScripts\RangoV.cs" />
+    <Compile Include="Assets\Scripts\EnemigosScripts\SerpienteScripts\HurtBoxSerpiente.cs" />
+    <Compile Include="Assets\Scripts\EnemigosScripts\TripasScripts\Tripas.cs" />
     <Compile Include="Assets\Scripts\Flip.cs" />
     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
     <Compile Include="Assets\Scripts\Managers\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Managers\UIManager.cs" />
     <Compile Include="Assets\Scripts\Oscilate.cs" />
-    <Compile Include="Assets\Scripts\Piston.cs" />
     <Compile Include="Assets\Scripts\Player\Invulnerable.cs" />
     <Compile Include="Assets\Scripts\Player\Knockback.cs" />
+    <Compile Include="Assets\Scripts\PowerUps\DropPowerUp.cs" />
     <Compile Include="Assets\Scripts\ProjectileProperties.cs" />
-    <Compile Include="Assets\Scripts\Trampas\Estalactita.cs" />
-    <Compile Include="Assets\Scripts\Tripas.cs" />
+    <Compile Include="Assets\Scripts\QuitGame.cs" />
+    <Compile Include="Assets\Scripts\Stunned.cs" />
+    <Compile Include="Assets\Scripts\StunPlayer.cs" />
+    <Compile Include="Assets\Scripts\TrampasScripts\Dragon.cs" />
+    <Compile Include="Assets\Scripts\TrampasScripts\Estalactita.cs" />
+    <Compile Include="Assets\Scripts\TrampasScripts\GotaOro.cs" />
+    <Compile Include="Assets\Scripts\TrampasScripts\Piston.cs" />
     <Compile Include="Assets\Scripts\Vida.cs" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/Ángel/Desktop/Uni/P1/AfterH1/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/Ángel/Desktop/Uni/P1/FragileArreglado/c1920-Grupo05/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/Ángel/Desktop/Uni/P1/AfterH1/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/Ángel/Desktop/Uni/P1/FragileArreglado/c1920-Grupo05/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/Ángel/Desktop/Uni/P1/AfterH1/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/Ángel/Desktop/Uni/P1/FragileArreglado/c1920-Grupo05/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/Ángel/Desktop/Uni/P1/AfterH1/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/Ángel/Desktop/Uni/P1/FragileArreglado/c1920-Grupo05/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/Ángel/Desktop/Uni/P1/AfterH1/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/Ángel/Desktop/Uni/P1/FragileArreglado/c1920-Grupo05/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/Ángel/Desktop/Uni/P1/AfterH1/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/Ángel/Desktop/Uni/P1/FragileArreglado/c1920-Grupo05/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/Ángel/Desktop/Uni/P1/AfterH1/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/Ángel/Desktop/Uni/P1/FragileArreglado/c1920-Grupo05/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>C:/Users/Ángel/Desktop/Uni/P1/AfterH1/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+      <HintPath>C:/Users/Ángel/Desktop/Uni/P1/FragileArreglado/c1920-Grupo05/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/Ángel/Desktop/Uni/P1/AfterH1/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/Ángel/Desktop/Uni/P1/FragileArreglado/c1920-Grupo05/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/Ángel/Desktop/Uni/P1/AfterH1/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/Ángel/Desktop/Uni/P1/FragileArreglado/c1920-Grupo05/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
