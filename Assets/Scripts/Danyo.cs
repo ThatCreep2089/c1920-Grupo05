@@ -9,12 +9,6 @@ public class Danyo : MonoBehaviour
         if (collision.gameObject.GetComponent<Vida>() != null)
         {   //Hace daño al personaje en cuestión//
             collision.gameObject.GetComponent<Vida>().QuitaVida(danyo);
-            //Comprobamos si es el jugador para aplicarle el Knockback
-            Knockback player = collision.gameObject.GetComponent<Knockback>();
-            if (player != null)
-            {
-                //player.OnKnockback();
-            }
         }
     }
 }

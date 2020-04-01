@@ -394,6 +394,7 @@ GameObject:
   - component: {fileID: 71184956}
   - component: {fileID: 71184955}
   - component: {fileID: 71184957}
+  - component: {fileID: 71184958}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -539,7 +540,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fff871666ca80b84c8cec38da17187d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Retroceso: 5
+  knockback: 1
+  empuje: 5
+  timer: 3
+--- !u!114 &71184958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71184951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 842de8ee0424f5a4ca41968f18ed68d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TiempoInvulneravilidad: 2
 --- !u!1001 &112325671
 PrefabInstance:
   m_ObjectHideFlags: 0
