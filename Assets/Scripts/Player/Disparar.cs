@@ -12,12 +12,15 @@ public class Disparar : MonoBehaviour
 	bool puedeDisparar = true;			//Si puedeDisparar = false, la cuenta progresiva aún no ha acabado.
 
 	Transform bulletSpawner;
-	Transform danteTransform;			//Para saber hacia donde mira el jugador (usando la escala local en X).
+	Transform danteTransform;           //Para saber hacia donde mira el jugador (usando la escala local en X).
+
+	Animator anim;
 
 	private void Awake()
 	{
-		bulletSpawner = gameObject.transform;
-		danteTransform = transform.parent;
+		bulletSpawner = gameObject.transform.GetChild(0);
+		danteTransform = gameObject.transform;
+		anim = GetComponent<Animator>();
 	}
 
 	void Update()
@@ -27,9 +30,22 @@ public class Disparar : MonoBehaviour
 		//Inicializo una cuenta progresiva.
 		if (Input.GetButtonDown("Submit") && puedeDisparar)
 		{
-			Dispara();
+			//Disparo hacia arriba.
+			if (Input.GetAxis("Vertical") > 0)
+			{
+				anim.SetTrigger("upattack");
+			}
+			else if (Input.GetAxis("Vertical") < 0)
+			{
+				anim.SetTrigger("downattack");
+			}
+			else
+			{
+				anim.SetTrigger("sideattack");
+			}
+
 			puedeDisparar = false;
-			attackCounter = 0;			//Cada vez que se dispare, el contador volverá a 0.
+			attackCounter = 0;          //Cada vez que se dispare, el contador volverá a 0.
 		}
 
 		//Mientras no pueda disparar, contará de 0 hacia arriba.
@@ -46,30 +62,23 @@ public class Disparar : MonoBehaviour
 		//Debug.LogError("puedo disparar " + puedeDisparar);
 	}
 
-	void Dispara()
+	public void Dispara()
 	{
 		//Disparo hacia arriba.
 		if (Input.GetAxis("Vertical") > 0)
 		{
-			if (Input.GetButtonDown("Submit"))
-			{   //La variable de disparo debe ser sobrevivir solo al metodo. No nos hara falta cambiar nada a su velocidad ahora.
-				//Si alguien tiene discrepancias, comentarlas(Autor: Joseda)
-				GameObject disparo = Instantiate(proyectil, bulletSpawner.position, bulletSpawner.rotation);
+			//La variable de disparo debe ser sobrevivir solo al metodo. No nos hara falta cambiar nada a su velocidad ahora.
+			//Si alguien tiene discrepancias, comentarlas(Autor: Joseda)
+			GameObject disparo = Instantiate(proyectil, bulletSpawner.position, bulletSpawner.rotation);
 
-				disparo.GetComponent<Rigidbody2D>().velocity = new Vector2(0, velocidadProyectil);
-			}
-
-
+			disparo.GetComponent<Rigidbody2D>().velocity = new Vector2(0, velocidadProyectil);
 		}
 		//Disparo hacia abajo.
 		else if (Input.GetAxis("Vertical") < 0)
 		{
-			if (Input.GetButtonDown("Submit"))
-			{
-				GameObject disparo = Instantiate(proyectil, bulletSpawner.position, bulletSpawner.rotation);
-
-				disparo.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -velocidadProyectil);
-			}
+			GameObject disparo = Instantiate(proyectil, bulletSpawner.position, bulletSpawner.rotation);
+			
+			disparo.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -velocidadProyectil);
 		}
 		//Si no hay input vertical, dispara acorde a la escala del transform del jugador.
 		//La cual varía según la dirección en la que se mueva el jugador, tal y como está
@@ -79,22 +88,16 @@ public class Disparar : MonoBehaviour
 		//por lo tanto dispara hacia la derecha.
 		else if (danteTransform.localScale.x >= 0)
 		{
-			if (Input.GetButton("Submit"))
-			{
-				GameObject disparo = Instantiate(proyectil, bulletSpawner.position, bulletSpawner.rotation);
-
-				disparo.GetComponent<Rigidbody2D>().velocity = new Vector2(velocidadProyectil, 0);
-			}
+			GameObject disparo = Instantiate(proyectil, bulletSpawner.position, bulletSpawner.rotation);
+			
+			disparo.GetComponent<Rigidbody2D>().velocity = new Vector2(velocidadProyectil, 0);
 		}
 		//En caso contrario, dispara hacia la izquierda.
 		else
 		{
-			if (Input.GetButtonDown("Submit"))
-			{
-				GameObject disparo = Instantiate(proyectil, bulletSpawner.position, bulletSpawner.rotation);
-
-				disparo.GetComponent<Rigidbody2D>().velocity = new Vector2(-velocidadProyectil, 0);
-			}
+			GameObject disparo = Instantiate(proyectil, bulletSpawner.position, bulletSpawner.rotation);
+			
+			disparo.GetComponent<Rigidbody2D>().velocity = new Vector2(-velocidadProyectil, 0);
 		}
 	}
 }
