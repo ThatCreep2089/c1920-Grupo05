@@ -29,7 +29,6 @@ public class DisparoEnemigo : MonoBehaviour
         GameObject balact;
         balact=Instantiate(bala, spawn.transform.position , Quaternion.identity);
         balact.GetComponent<Rigidbody2D>().velocity = veldisp * jugadorp;
-        Debug.Log("vel:" + balact.GetComponent<Rigidbody2D>().velocity);
     }
     //Cuando entra guardamos el Transform del jugador// 
     private void OnTriggerEnter2D(Collider2D collision)

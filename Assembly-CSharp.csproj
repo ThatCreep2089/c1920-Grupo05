@@ -80,6 +80,7 @@
     <Compile Include="Assets\Scripts\Flip.cs" />
     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
     <Compile Include="Assets\Scripts\Managers\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Managers\PowerUpManager.cs" />
     <Compile Include="Assets\Scripts\Managers\UIManager.cs" />
     <Compile Include="Assets\Scripts\Oscilate.cs" />
     <Compile Include="Assets\Scripts\Player\Invulnerable.cs" />

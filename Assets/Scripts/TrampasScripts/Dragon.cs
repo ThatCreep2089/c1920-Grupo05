@@ -5,16 +5,15 @@ using UnityEngine;
 public class Dragon : MonoBehaviour
 {
     public Transform dragon; //Hay que saber desde DONDE SALE LA BALA
-    public GameObject rayoPrefab;
-    private GameObject rayoAux;
+    public GameObject rayo;
 
     public float tiempoRayo; //tiempo que dura la llamarada
     private float tRayoAuxiliar;
 
-    public float tiempoEspera; //tiempo que tiene que esperar entre llamaradas
+    public float tiempoEspera;
     private float tEsperaAuxiliar;
 
-    private bool rayo;
+    private bool activo;
 
     void Awake()
     {
@@ -22,7 +21,7 @@ public class Dragon : MonoBehaviour
 
         tEsperaAuxiliar = tiempoEspera;
 
-        rayo = false;
+        activo = false;
     }
 
     // Update is called once per frame
@@ -30,12 +29,14 @@ public class Dragon : MonoBehaviour
     {
         //if (Input.GetKeyDown(KeyCode.Q)) rayo = true;
 
-        //TOCA DISPARAR ==> VIDA DEL RAYO
-        if (rayo)
+        //TOCA DISPARAR
+        if (activo)
         {
             if (tRayoAuxiliar == tiempoRayo)
             {
-                rayoAux = Instantiate(rayoPrefab); //APARECE EL RAYO
+                rayo.SetActive (true); //APARECE EL RAYO
+                //rayo.SetActive??
+                Debug.Log("LO ACTIVO");
 
                 tRayoAuxiliar -= Time.deltaTime;
             }
@@ -49,9 +50,11 @@ public class Dragon : MonoBehaviour
 
                 else
                 {
-                    Destroy(rayoAux); //DESTRUYE EL RAYO                    
-                    
-                    rayo = false;                    
+                    activo = false;
+
+                    rayo.SetActive (false); //DESTRUYE EL RAYO
+
+                    Debug.Log("LO DESACTIVO");
                 }
             }
         }
@@ -60,19 +63,22 @@ public class Dragon : MonoBehaviour
         else
         {
             if (tEsperaAuxiliar > 0)
-                tEsperaAuxiliar -= tiempoEspera;
+            {
+                tEsperaAuxiliar -= Time.deltaTime;
+
+                //Debug.Log("ESPERO AL SIG");
+            }
+                
 
             else
             {
                 tRayoAuxiliar = tiempoRayo;
 
-                rayo = true;
-
+                activo = true;
+                Debug.Log("TERMINO LA ESPERA");
                 tEsperaAuxiliar = tiempoEspera;
-
-                Debug.Log("Satan estuvo aqui");
             }
         }
     }
-    
+
 }
