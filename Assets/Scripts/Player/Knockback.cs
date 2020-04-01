@@ -1,34 +1,51 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Knockback : MonoBehaviour
 {
-    //Se activa cuando el jugador recibe daño, no consigo que se mueva en el eje x y no se por que//
-    public float Retroceso;
-    Rigidbody2D rb;
-    bool knockback = true;
-    private void Awake()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
-    private void Update()
-    {
-        if (knockback)
-        {
-            knockback = !knockback;
-            rb.AddForce(transform.up * Retroceso, ForceMode2D.Impulse);
-            rb.AddForce(transform.right * (-Retroceso), ForceMode2D.Impulse);
-        }
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        LayerMask impacto = collision.gameObject.layer;
-        if (impacto == 15 || impacto == 14 || impacto == 10) knockback =true;
-    }
-    //public void OnKnockback()
-    //{
-    //    rb.AddForce(Retroceso,ForceMode2D.Impulse);
-    //    Debug.LogError("Hola me cago en dios estoy aquí");
-    //}
+
+	#region Variables
+	public bool knockBack;
+	public float thrust;
+	public float timer;
+
+	float count;
+
+	Rigidbody2D rb;
+	PlayerMovement PlayerMove;
+	#endregion
+
+	#region Unity Methods
+	void Start()
+	{
+		rb = GetComponent<Rigidbody2D>();
+		PlayerMove = GetComponentInChildren<PlayerMovement>();
+	}
+
+	void Update()
+	{
+		if (knockBack)
+		{
+			count = timer;
+			knockBack = !knockBack;
+			PlayerMove.enabled = false; //desactivo cualquier tipo de input, o incluso el input nulo que es 0, para permitir el empuje
+			//Ahora habria que poner segun el punto de contacto, hacia donde empujar.
+			rb.AddForce(transform.right * -thrust);
+			rb.AddForce(transform.up * thrust);
+		}
+
+		if(count >= 0)
+		{
+			//Mientras sufre el empuje, se va deslizando, por lo que hay que controlar que no se desplace de más con un timer
+			count -= Time.deltaTime;
+
+		}
+		else
+		{
+			//Para evitar que continue deslizandose, activo el input del jugador, por lo que tambien se activa el input 0 estático.
+			if(PlayerMove != null)
+				PlayerMove.enabled = true;
+		}
+	}
+
+	#endregion
 }

@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
 	//runVelocity  en el movimiento horizontal
 	public int runVelocity = 15;
 
-
+	Animator anim;
 	Rigidbody2D rbParent;
 	Transform parent;
 	float jumpCounter;
@@ -25,8 +25,9 @@ public class PlayerMovement : MonoBehaviour
 
 	void Awake()
 	{
-		rbParent = gameObject.GetComponentInParent<Rigidbody2D>();
+		rbParent = GetComponentInParent<Rigidbody2D>();
 		parent = transform.parent;
+		anim = GetComponentInParent<Animator>();
 	}
 
 	void Update()
@@ -38,6 +39,8 @@ public class PlayerMovement : MonoBehaviour
 		{
 			rbParent.velocity = Vector2.up * jumpForce;
 			isJumping = true;//isInRest se vuelve falso al dejar de tocar el suelo en el OnTriggerExit2D.
+
+			anim.SetTrigger("isJumping");//Comienza la animación de salto.
 			jumpCounter = jumpTime;
 		}
 		//Si mantengo el salto, es que he dejado de tocar el suelo y empieza una cuenta regresiva.
@@ -49,15 +52,34 @@ public class PlayerMovement : MonoBehaviour
 				rbParent.velocity = Vector2.up * jumpForce;
 				jumpCounter -= Time.deltaTime;
 			}
-			else isJumping = false;
+			else
+			{
+				isJumping = false;
+				anim.SetTrigger("isFalling"); //Si se le acaba el tiempo, empieza la animacion de caida.
+			}
 		}
 		//En caso de que suelte el boton de saltar, no podre volver a
 		//saltar hasta que esté en el suelo.
-		if (!Input.GetButton("Jump")) isJumping = false;
+		if (!Input.GetButton("Jump"))
+		{
+			isJumping = false;	
+		}
+
+		if(Input.GetButtonUp("Jump"))
+		{
+			anim.SetTrigger("isFalling");//Si suelta el boton de salto antes de que se acabe el tiempo, empieza la animacion de caida.
+		}
+
+
 		#endregion
 
 		#region Horizontal
-		rbParent.velocity = new Vector2(runVelocity * Input.GetAxisRaw("Horizontal"), rbParent.velocity.y);
+		//New
+		float horizontalMovement = runVelocity * Input.GetAxisRaw("Horizontal");
+		anim.SetFloat("xMove", Mathf.Abs(horizontalMovement));
+		//Close.New
+
+		rbParent.velocity = new Vector2(horizontalMovement, rbParent.velocity.y);
 
 		if (rbParent.velocity.x > 0) parent.localScale = new Vector3(1, 1, 1);
 
@@ -67,12 +89,17 @@ public class PlayerMovement : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
+		if (!isInRest)
+			 anim.SetTrigger("isLanding"); //Si al colisionar con el suelo, no esta en reposo, empieza la animacion de aterrizaje
 		isInRest = true;
+	
 	}
 
 	private void OnTriggerExit2D(Collider2D collision)
 	{
 		isInRest = false;
+		if(!isJumping)
+			anim.SetTrigger("isFalling"); //Si sale de una plataforma y no esta saltando, empieza la animacion de caida.
 	}
 	#endregion
 
