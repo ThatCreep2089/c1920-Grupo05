@@ -14,8 +14,10 @@ public class Danyo : MonoBehaviour
             Invulnerable playerInv = collision.gameObject.GetComponent<Invulnerable>();
             if(player!=null && playerInv != null)
             {
+                Animator anim = collision.gameObject.GetComponent<Animator>();
                 player.knockBack = true;
                 playerInv.enabled = true;
+                anim.SetTrigger("Knockback");
             }
         }
     }
