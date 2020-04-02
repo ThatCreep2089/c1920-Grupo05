@@ -29,6 +29,7 @@ public class Knockback : MonoBehaviour
 			knockBack = !knockBack;
 			PlayerMove.enabled = false; //desactivo cualquier tipo de input, o incluso el input nulo que es 0, para permitir el empuje
 			//Ahora habria que poner segun el punto de contacto, hacia donde empujar.
+            
 			rb.AddForce(transform.right * -thrust);
 			rb.AddForce(transform.up * thrust);
 		}

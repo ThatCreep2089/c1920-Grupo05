@@ -14,7 +14,10 @@ public class Danyo : MonoBehaviour
             Invulnerable playerInv = collision.gameObject.GetComponent<Invulnerable>();
             if(player!=null && playerInv != null)
             {
+                Transform playerbody = collision.gameObject.GetComponent<Transform>();
                 Animator anim = collision.gameObject.GetComponent<Animator>();
+                //Comprobamos desde que posición es golpeado al jugador y si es la izquierda le ponemos fuerza desde el otro lado//
+                if (transform.position.x < playerbody.position.x) player.thrust = -player.thrust;   
                 player.knockBack = true;
                 playerInv.enabled = true;
                 anim.SetTrigger("Knockback");
