@@ -33,15 +33,15 @@ public class Disparar : MonoBehaviour
 			//Disparo hacia arriba.
 			if (Input.GetAxis("Vertical") > 0)
 			{
-				anim.SetTrigger("upattack");
+				anim.SetTrigger("UpAttack");
 			}
 			else if (Input.GetAxis("Vertical") < 0)
 			{
-				anim.SetTrigger("downattack");
+				anim.SetTrigger("DownAttack");
 			}
 			else
 			{
-				anim.SetTrigger("sideattack");
+				anim.SetTrigger("SideAttack");
 			}
 
 			puedeDisparar = false;

@@ -726,6 +726,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3348279148157765011, guid: 1edbdf53195575d4e858262d9ce26513,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348279148157765011, guid: 1edbdf53195575d4e858262d9ce26513,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1edbdf53195575d4e858262d9ce26513, type: 3}
 --- !u!1 &620272857
@@ -1800,6 +1810,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rata
+      objectReference: {fileID: 0}
+    - target: {fileID: 4127188912284960953, guid: 35f8240c8c5ccfd4db19d20db95c1078,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4127188912284960901, guid: 35f8240c8c5ccfd4db19d20db95c1078,
         type: 3}

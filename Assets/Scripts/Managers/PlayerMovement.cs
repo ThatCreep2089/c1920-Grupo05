@@ -32,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
 
 	void Update()
 	{
+	
 		#region Vertical
 		//Si presiono el salto, me elevo a una distancia predeterminada.
 		//Inicializo una cuenta regresiva.
@@ -65,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
 			isJumping = false;	
 		}
 
-		if(Input.GetButtonUp("Jump"))
+		if(Input.GetButtonUp("Jump") && !isInRest)
 		{
 			anim.SetTrigger("isFalling");//Si suelta el boton de salto antes de que se acabe el tiempo, empieza la animacion de caida.
 		}
@@ -74,10 +75,8 @@ public class PlayerMovement : MonoBehaviour
 		#endregion
 
 		#region Horizontal
-		//New
 		float horizontalMovement = runVelocity * Input.GetAxisRaw("Horizontal");
 		anim.SetFloat("xMove", Mathf.Abs(horizontalMovement));
-		//Close.New
 
 		rbParent.velocity = new Vector2(horizontalMovement, rbParent.velocity.y);
 
@@ -90,7 +89,11 @@ public class PlayerMovement : MonoBehaviour
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (!isInRest)
-			 anim.SetTrigger("isLanding"); //Si al colisionar con el suelo, no esta en reposo, empieza la animacion de aterrizaje
+		{
+			Debug.Log("Aterriza!");
+			anim.SetTrigger("isLanding"); //Si al colisionar con el suelo, no esta en reposo, empieza la animacion de aterrizaje
+		}
+			 
 		isInRest = true;
 	
 	}
