@@ -5,6 +5,8 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
     public Image[] corazones;
+	public Image[] powerUps;
+
     int indice;
     private void Awake()
     {
@@ -15,10 +17,7 @@ public class UIManager : MonoBehaviour
         else Destroy(this);
         indice = 0;
     }
-    void Start()
-    {
 
-    }
     public void ReducirCorazon(int danyo)
     {
         int control = indice;
@@ -39,4 +38,15 @@ public class UIManager : MonoBehaviour
             }
         }
     }
+
+	public void AñadirPowerUp(GameObject powerUp)
+	{
+		string s = powerUp.name;
+		s = s.Replace("(Clone)","");
+
+		int i = 0;
+		while (i < powerUps.Length && powerUps[i].name != s) i++;
+		if (i < powerUps.Length)
+			powerUps[i].gameObject.SetActive(true);
+	}
 }

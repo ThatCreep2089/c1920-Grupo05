@@ -5,14 +5,16 @@ public class Vida : MonoBehaviour
     Animator anim;
     DisparoEnemigo dispara;
     EnemigoHaciaPla moverse;
-    private void Start()
+	public int salud;
+
+	private void Start()
     {
         dispara = GetComponentInChildren<DisparoEnemigo>();
         moverse = GetComponentInChildren<EnemigoHaciaPla>();
 
         anim = transform.GetComponent<Animator>();
     }
-    public int salud;
+    
     public void QuitaVida(int danyo)
     {
         salud = salud - danyo;
@@ -33,10 +35,12 @@ public class Vida : MonoBehaviour
             anim.SetTrigger("Dead");
         }
     }
+
     public void OnDead()
     {
         GameManager.instance.Morir(this.gameObject);
     }
+
     public void Infanticidio()
     {
         for (int i = 0; i < gameObject.transform.childCount; i++)
