@@ -71,7 +71,6 @@ public class PlayerMovement : MonoBehaviour
 			anim.SetTrigger("isFalling");//Si suelta el boton de salto antes de que se acabe el tiempo, empieza la animacion de caida.
 		}
 
-
 		#endregion
 
 		#region Horizontal
@@ -88,14 +87,12 @@ public class PlayerMovement : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		if (!isInRest)
+		if (!isInRest && !isJumping)
 		{
-			Debug.Log("Aterriza!");
 			anim.SetTrigger("isLanding"); //Si al colisionar con el suelo, no esta en reposo, empieza la animacion de aterrizaje
 		}
 			 
 		isInRest = true;
-	
 	}
 
 	private void OnTriggerExit2D(Collider2D collision)

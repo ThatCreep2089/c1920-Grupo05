@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3348279148157765008}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.04559637, y: -0.09758623, z: -4.671232}
+  m_LocalPosition: {x: 0, y: 0, z: -4.671232}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3348279149137609445}
@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 3348279149137609443}
   - component: {fileID: 558819125342461111}
   - component: {fileID: 5145889779546953492}
+  - component: {fileID: 1143897900}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -261,14 +262,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3348279149137609450}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fff871666ca80b84c8cec38da17187d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   knockBack: 0
   thrust: 250
-  timer: 0
+  timer: 2
 --- !u!114 &5145889779546953492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,6 +286,19 @@ MonoBehaviour:
   proyectil: {fileID: 2144757585097190251, guid: 8a0edad3b9a87734480b217abe02f04f,
     type: 3}
   attackTime: 1
+--- !u!114 &1143897900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3348279149137609450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 842de8ee0424f5a4ca41968f18ed68d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TiempoInvulneravilidad: 3
 --- !u!1 &3348279149198379287
 GameObject:
   m_ObjectHideFlags: 0
