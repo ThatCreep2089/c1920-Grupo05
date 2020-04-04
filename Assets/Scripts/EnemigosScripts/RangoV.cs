@@ -12,7 +12,7 @@ public class RangoV : MonoBehaviour
     private void Awake()
     {
         dispara = GetComponent<DisparoEnemigo>();
-        moverse = GetComponentInParent<EnemigoHaciaPla>();
+        moverse = GetComponent<EnemigoHaciaPla>();
         oscila = GetComponentInParent<Oscilate>();
         tripas = GetComponent<Tripas>();
 
@@ -28,6 +28,7 @@ public class RangoV : MonoBehaviour
 
             //animacion de movimiento
             anim.SetBool("Walking", true);
+            
         }
         else if (oscila != null) oscila.enabled = true;
         else if (tripas != null) tripas.enabled = true;
