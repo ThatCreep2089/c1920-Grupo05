@@ -3,7 +3,7 @@
 public class DropPowerUp : MonoBehaviour
 {
     public GameObject PowerUp;
-    private void OnDestroy()
+    public void CreatePowerUp()
     {
         if (PowerUp != null) { Instantiate<GameObject>(PowerUp, transform.position, Quaternion.identity); }
     }
