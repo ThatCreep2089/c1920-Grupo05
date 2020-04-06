@@ -37,6 +37,19 @@ public class PowerUpManager : MonoBehaviour
 			balaPrefab.GetComponent<ProjectileProperties>().tiempoProyectil *= 2;
 			powerUpControl = 3;
 		}
+        else if (powerUp.name == "VidaExtra(Clone)")
+        {
+            if(this.gameObject.GetComponent<Vida>().salud + 2 <= 6)
+            {
+                this.gameObject.GetComponent<Vida>().salud += 2;
+                UIManager.instance.AddCorazon(2);
+            }  
+            else if (this.gameObject.GetComponent<Vida>().salud + 1 <= 6)
+            {
+                this.gameObject.GetComponent<Vida>().salud += 1;
+                UIManager.instance.AddCorazon(1);
+            }
+        }
 	}
 
 	void DesactivatePowerUp()

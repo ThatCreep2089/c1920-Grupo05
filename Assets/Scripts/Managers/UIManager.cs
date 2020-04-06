@@ -39,6 +39,15 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    public void AddCorazon(int vidaExtra)
+    {
+        for(int i = 0; i < vidaExtra; i++)
+        {
+            indice--;
+            corazones[indice].gameObject.SetActive(true);
+        }
+    }
+
 	public void AñadirPowerUp(GameObject powerUp)
 	{
 		string s = powerUp.name;
