@@ -1,0 +1,679 @@
+fileFormatVersion: 2
+guid: 0f93400db5919c94b83047f34a98d54a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5418666645960651212
+    second: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_0
+  - first:
+      213: -5900193629213800227
+    second: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_1
+  - first:
+      213: -2715496111420526597
+    second: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_2
+  - first:
+      213: -4461512985314822391
+    second: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_3
+  - first:
+      213: 585341613988552250
+    second: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_4
+  - first:
+      213: -7233693236977594475
+    second: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_5
+  - first:
+      213: -5948008341324484315
+    second: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_6
+  - first:
+      213: -8115307013033250502
+    second: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_7
+  - first:
+      213: -7903699589115381995
+    second: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_8
+  - first:
+      213: -2319746138288162326
+    second: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_9
+  - first:
+      213: -5260438288751551328
+    second: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_10
+  - first:
+      213: -3985331529002325847
+    second: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_11
+  - first:
+      213: 3212197449157449737
+    second: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_12
+  - first:
+      213: -8783033790290029826
+    second: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_13
+  - first:
+      213: -4901197589952418010
+    second: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_14
+  - first:
+      213: 3442948767326431371
+    second: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_15
+  - first:
+      213: -6879701275467308210
+    second: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_16
+  - first:
+      213: 4933846267093589148
+    second: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_17
+  - first:
+      213: -8972207679968673191
+    second: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_18
+  - first:
+      213: -3953015880807793265
+    second: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_19
+  - first:
+      213: 6367448134662522616
+    second: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_20
+  - first:
+      213: 3248136705927524924
+    second: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_21
+  - first:
+      213: -3414697319248423595
+    second: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_22
+  - first:
+      213: -5566477878733369873
+    second: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_23
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 10
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 302
+        width: 58
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e444cc2fd4ec9f64995885ae15ad8dff
+      internalID: 5418666645960651212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_1
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 302
+        width: 53
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d984f0adec9a7674b97431fcb203d5de
+      internalID: -5900193629213800227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_2
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 302
+        width: 61
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 799fca9decf2f4f48b8e8edcec5ce1cf
+      internalID: -2715496111420526597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_3
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 302
+        width: 75
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3939a945b870192449bc1e1992bd85bd
+      internalID: -4461512985314822391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_4
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 302
+        width: 70
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c15e9a149095e2943907eeebb3ef6ad4
+      internalID: 585341613988552250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_5
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 231
+        width: 67
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f580199f765531d4a8016012a4760602
+      internalID: -7233693236977594475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_6
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 224
+        width: 77
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 560e47466180a2a44832a97924a5a4fc
+      internalID: -5948008341324484315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_7
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 221
+        width: 64
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e005a087dcb556a4780f097c5b3e49bc
+      internalID: -8115307013033250502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_8
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 221
+        width: 54
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16787f968dfc6984a859598cd8fac79b
+      internalID: -7903699589115381995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_9
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 222
+        width: 58
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfe9275225c141140bec1847c4bb0fce
+      internalID: -2319746138288162326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_10
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 148
+        width: 58
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af1dae54cd3524047b411945c599f8d8
+      internalID: -5260438288751551328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_11
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 148
+        width: 53
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 737005e60f8b1174fb72b4ccbc21825c
+      internalID: -3985331529002325847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_12
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 152
+        width: 67
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e961a92424fdfab41b860e120376c706
+      internalID: 3212197449157449737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_13
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 142
+        width: 77
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f4e871fc82704b4b960c9e2e879452e
+      internalID: -8783033790290029826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_14
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 139
+        width: 64
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ce51846636db084081e226147829065
+      internalID: -4901197589952418010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_15
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 68
+        width: 61
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a503e618243b3f4592521cdc0aba519
+      internalID: 3442948767326431371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_16
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 68
+        width: 54
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f01e4d4fdb303142806b3939d1cd521
+      internalID: -6879701275467308210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_17
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 68
+        width: 58
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a25a4202f129dea45aaaf6dc6812957b
+      internalID: 4933846267093589148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_18
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 59
+        width: 58
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7c8c247956f87c43bfd2ff532b7ebab
+      internalID: -8972207679968673191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_19
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 59
+        width: 58
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbad79e12b35fc3439787462521106a9
+      internalID: -3953015880807793265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_20
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 14
+        width: 77
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 517ae4891294f52469254feaa757542e
+      internalID: 6367448134662522616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_21
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 14
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c51ab6c96d9bf34ebe5dacd5544e7b1
+      internalID: 3248136705927524924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_22
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 16
+        width: 64
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45852a23e35f3324585866006aed6a93
+      internalID: -3414697319248423595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Genesis 32X SCD - Splatterhouse 3 - Fat Zombie_23
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 15
+        width: 48
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e082079c230b91f43bdd5abc24bae377
+      internalID: -5566477878733369873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

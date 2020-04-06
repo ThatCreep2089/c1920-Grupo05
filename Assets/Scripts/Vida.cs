@@ -32,7 +32,10 @@ public class Vida : MonoBehaviour
             {
                 moverse.enabled = false;
             }
-            anim.SetTrigger("Dead");
+            if(anim != null)
+            {
+                anim.SetTrigger("Dead");
+            }
         }
     }
 
