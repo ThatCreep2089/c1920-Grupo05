@@ -725,6 +725,26 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 558819125342461111, guid: 1edbdf53195575d4e858262d9ce26513,
+        type: 3}
+      propertyPath: timer
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 558819125342461111, guid: 1edbdf53195575d4e858262d9ce26513,
+        type: 3}
+      propertyPath: thrust
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348279148157765005, guid: 1edbdf53195575d4e858262d9ce26513,
+        type: 3}
+      propertyPath: jumpForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348279148157765005, guid: 1edbdf53195575d4e858262d9ce26513,
+        type: 3}
+      propertyPath: jumpTime
+      value: 0.4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1edbdf53195575d4e858262d9ce26513, type: 3}
 --- !u!1 &620272857
@@ -1102,6 +1122,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 430895739473691791, guid: a0c65bf3bb1f0934391db08594fe11e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0c65bf3bb1f0934391db08594fe11e7, type: 3}
