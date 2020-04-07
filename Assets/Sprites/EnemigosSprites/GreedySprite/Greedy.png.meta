@@ -1,7 +1,43 @@
 fileFormatVersion: 2
 guid: 8d4342c123dfca54b803623a2c9a9bee
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 7299610497808026935
+    second: Greedy_0
+  - first:
+      213: 5109789077737552013
+    second: Greedy_1
+  - first:
+      213: 5077893050576961318
+    second: Greedy_2
+  - first:
+      213: -6225510961556660559
+    second: Greedy_3
+  - first:
+      213: 1846206186399495844
+    second: Greedy_4
+  - first:
+      213: 8816571637238212358
+    second: Greedy_5
+  - first:
+      213: 8256243520795768896
+    second: Greedy_6
+  - first:
+      213: 3376676493363291914
+    second: Greedy_7
+  - first:
+      213: -7567987946690826947
+    second: Greedy_8
+  - first:
+      213: -789407157126841735
+    second: Greedy_9
+  - first:
+      213: 5450858794741398515
+    second: Greedy_10
+  - first:
+      213: 4703484589862490444
+    second: Greedy_11
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -31,7 +67,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,12 +76,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 50
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -63,7 +99,19 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -72,7 +120,259 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Greedy_0
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 239
+        width: 90
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe134c0d0d6bf5a4cace259cdac09a42
+      internalID: 7299610497808026935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Greedy_1
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 239
+        width: 82
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 499c8cfaf3417f94ca82868bcf2fb221
+      internalID: 5109789077737552013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Greedy_2
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 238
+        width: 76
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00c42307887b6ea4ba0c1984278b38db
+      internalID: 5077893050576961318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Greedy_3
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 240
+        width: 82
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2744751d83b5d89499cd5d105afc37f5
+      internalID: -6225510961556660559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Greedy_4
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 244
+        width: 91
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75d1db4650776dc41906692316b969b8
+      internalID: 1846206186399495844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Greedy_5
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 123
+        width: 90
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19bea897b377eee4d8b6bd763277a786
+      internalID: 8816571637238212358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Greedy_6
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 122
+        width: 90
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3259831e3f1f75c4ba25b4dfd0c3d044
+      internalID: 8256243520795768896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Greedy_7
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 124
+        width: 87
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 077f8e6db81d72a4eac68c6d36f15d38
+      internalID: 3376676493363291914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Greedy_8
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 124
+        width: 90
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 244e52e35bcddbf47979a572f3f78426
+      internalID: -7567987946690826947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Greedy_9
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 121
+        width: 90
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39a7c3e14455e344e826051dd3e8d24b
+      internalID: -789407157126841735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Greedy_10
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 13
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77c535b505ffab5479594adc63b65c57
+      internalID: 5450858794741398515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Greedy_11
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 14
+        width: 90
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c63bb21524f55d544aaf3bedcf301126
+      internalID: 4703484589862490444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

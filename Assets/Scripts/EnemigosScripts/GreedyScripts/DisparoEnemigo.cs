@@ -9,6 +9,7 @@ public class DisparoEnemigo : MonoBehaviour
     public float segundos;
     float segundosAuxiliar;
     Transform player;
+    Animator anim;
     //Crea una bala y le asigna la dirección del jugador//
     private void Awake()
     {
@@ -23,7 +24,7 @@ public class DisparoEnemigo : MonoBehaviour
             segundos = segundosAuxiliar;
         }
     }
-    void CrearBala()
+    public void CrearBala()
     {
         Vector2 jugadorp = (player.position - transform.parent.position).normalized;    //Sacamos el vector director de la posición del jugador//
         GameObject balact;
@@ -33,7 +34,7 @@ public class DisparoEnemigo : MonoBehaviour
     //Cuando entra guardamos el Transform del jugador// 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        player = collision.GetComponent<Transform>();
+        player = collision.GetComponent<Transform>();       
     }
     private void OnEnable()
     {
