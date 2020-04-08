@@ -7,9 +7,9 @@ public class Knockback : MonoBehaviour
 	public bool knockBack;
 	public float thrust;
 	public float timer;
-
+    
 	float count;
-
+    float guardaThrusts;
 	Rigidbody2D rb;
 	PlayerMovement PlayerMove;
 	#endregion
@@ -20,18 +20,22 @@ public class Knockback : MonoBehaviour
 		rb = GetComponent<Rigidbody2D>();
 		PlayerMove = GetComponentInChildren<PlayerMovement>();
 	}
+    private void Awake()
+    {
+        guardaThrusts = thrust;
+    }
 
-	void Update()
+    void Update()
 	{
 		if (knockBack)
 		{
 			count = timer;
 			knockBack = !knockBack;
 			PlayerMove.enabled = false; //desactivo cualquier tipo de input, o incluso el input nulo que es 0, para permitir el empuje
-			//Ahora habria que poner segun el punto de contacto, hacia donde empujar.
-            
+			//Ahora habria que poner segun el punto de contacto, hacia donde empujar.           
 			rb.AddForce(transform.right * -thrust);
 			rb.AddForce(transform.up * thrust);
+            thrust = guardaThrusts;
 		}
 
 		if(count >= 0)
