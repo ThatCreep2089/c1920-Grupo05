@@ -76,6 +76,9 @@
     <Compile Include="Assets\Scripts\EnemigosScripts\MurciélagoScripts\Murcielago.cs" />
     <Compile Include="Assets\Scripts\EnemigosScripts\RangoV.cs" />
     <Compile Include="Assets\Scripts\EnemigosScripts\SerpienteScripts\HurtBoxSerpiente.cs" />
+    <Compile Include="Assets\Scripts\EnemigosScripts\StinkyScripts\NubeGasDanyo.cs" />
+    <Compile Include="Assets\Scripts\EnemigosScripts\StinkyScripts\Stinky.cs" />
+    <Compile Include="Assets\Scripts\EnemigosScripts\StinkyScripts\StinkyGas.cs" />
     <Compile Include="Assets\Scripts\EnemigosScripts\TripasScripts\Tripas.cs" />
     <Compile Include="Assets\Scripts\Flip.cs" />
     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
