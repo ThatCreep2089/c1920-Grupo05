@@ -800,10 +800,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1143897900, guid: 1edbdf53195575d4e858262d9ce26513, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 558819125342461111, guid: 1edbdf53195575d4e858262d9ce26513,
         type: 3}
       propertyPath: timer
@@ -813,6 +809,10 @@ PrefabInstance:
         type: 3}
       propertyPath: thrust
       value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 1143897900, guid: 1edbdf53195575d4e858262d9ce26513, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3348279148157765005, guid: 1edbdf53195575d4e858262d9ce26513,
         type: 3}
