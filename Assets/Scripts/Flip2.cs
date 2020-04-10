@@ -5,10 +5,13 @@ using UnityEngine;
 public class Flip2 : MonoBehaviour
 {
     Transform player, enemigo;
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         player = collision.gameObject.GetComponent<Transform>();
-        enemigo = GetComponentInParent<Transform>();
+    }
+    private void Awake()
+    {
+        enemigo = transform.parent;
     }
     private void Update()
     {
@@ -18,13 +21,12 @@ public class Flip2 : MonoBehaviour
             bool enemigohaciader = player.position.x < transform.position.x && DireccionEnemigo() > 0;
             if (enemigohaciader || enemigohaciaiz)
             {
-                enemigo.localScale = -enemigo.localScale;
-                Debug.Log("Mis huevos");
+                enemigo.localScale = new Vector3(-enemigo.localScale.x, enemigo.localScale.y, enemigo.localScale.z);
             }
         }       
     }
     private float DireccionEnemigo()
-    {
+    {//Devulve si mira hacia la izquierda o la derecha//
         return enemigo.localScale.x;
     }
 }
