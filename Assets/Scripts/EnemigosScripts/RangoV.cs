@@ -37,7 +37,7 @@ public class RangoV : MonoBehaviour
         }
         else if (oscila != null) oscila.enabled = true;
         else if (tripas != null) tripas.enabled = true;
-        //else if (gira != null) gira.enabled = true;
+        if (gira != null) gira.enabled = true;
     }
     private void OnTriggerExit2D(Collider2D other)
     {
@@ -54,6 +54,6 @@ public class RangoV : MonoBehaviour
             parent.velocity = Vector2.zero;
         }
         else if (oscila != null) oscila.enabled = false;
-        //else if (gira != null) gira.enabled=false;
+        if (gira != null) gira.enabled=false;
     }
 }

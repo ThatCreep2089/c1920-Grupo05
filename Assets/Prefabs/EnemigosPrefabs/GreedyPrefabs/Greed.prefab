@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 8124841704730235847}
   - component: {fileID: 8124841704730235846}
   - component: {fileID: 8124841704730235845}
+  - component: {fileID: 2335625456899516629}
   m_Layer: 13
   m_Name: CampoVision
   m_TagString: Untagged
@@ -117,6 +118,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b58f374f03efedd42a7e5113d0753e68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2335625456899516629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8124841704730235843}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e831ec6748760b4fab94cfd9172c78e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8124841706002589092
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,7 +183,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 11.25, y: 11.625}
+    oldSize: {x: 1.8, y: 1.86}
     newSize: {x: 11.25, y: 11.625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
