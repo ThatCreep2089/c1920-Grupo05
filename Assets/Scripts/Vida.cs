@@ -5,14 +5,16 @@ public class Vida : MonoBehaviour
     Animator anim;
     DisparoEnemigo dispara;
     EnemigoHaciaPla moverse;
+	Knockback knockback;
 	public int salud;
 
 	private void Start()
     {
         dispara = GetComponentInChildren<DisparoEnemigo>();
         moverse = GetComponentInChildren<EnemigoHaciaPla>();
+		knockback = GetComponent<Knockback>();
 
-        anim = transform.GetComponent<Animator>();
+		anim = transform.GetComponent<Animator>();
     }
     
     public void QuitaVida(int danyo)
@@ -24,6 +26,9 @@ public class Vida : MonoBehaviour
         }
         if (salud <= 0)
         {
+			if (knockback != null)         //El KnockBack Interrumpe la anim de muerte. Aun hay que hacer arreglos para que funcione mejor.
+				knockback.enabled = false;
+
             if(dispara != null)             //para que no se mueva ni dispare en los primeros frames de la animacion de muerte.
             {
                 dispara.enabled = false;
@@ -34,7 +39,7 @@ public class Vida : MonoBehaviour
             }
             if(anim != null)
             {
-                anim.SetTrigger("Dead");
+				anim.SetTrigger("Dead");
             }
         }
     }
