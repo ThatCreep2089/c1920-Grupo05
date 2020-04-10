@@ -9,13 +9,14 @@ public class RangoV : MonoBehaviour
     Oscilate oscila;
     Tripas tripas;
     Animator anim;
+    Flip2 gira;
     private void Awake()
     {
         dispara = GetComponent<DisparoEnemigo>();
         moverse = GetComponent<EnemigoHaciaPla>();
         oscila = GetComponentInParent<Oscilate>();
         tripas = GetComponent<Tripas>();
-
+        gira = GetComponent<Flip2>();
         anim = transform.GetComponentInParent<Animator>();
     }
     //Comprobamos que tipo de enemigo es y en función de ello hacemos una cosa u otra//
@@ -36,6 +37,7 @@ public class RangoV : MonoBehaviour
         }
         else if (oscila != null) oscila.enabled = true;
         else if (tripas != null) tripas.enabled = true;
+        //else if (gira != null) gira.enabled = true;
     }
     private void OnTriggerExit2D(Collider2D other)
     {
@@ -52,5 +54,6 @@ public class RangoV : MonoBehaviour
             parent.velocity = Vector2.zero;
         }
         else if (oscila != null) oscila.enabled = false;
+        //else if (gira != null) gira.enabled=false;
     }
 }
