@@ -94,7 +94,6 @@ public class PlayerMovement : MonoBehaviour
 		if (!isInRest && !isJumping)
 		{
 			anim.SetTrigger("isLanding"); //Si al colisionar con el suelo, no esta en reposo, empieza la animacion de aterrizaje
-			Debug.Log("<b><color=red>Aterriza!</color></b>");
 		}
 		isInRest = true;
 	}
