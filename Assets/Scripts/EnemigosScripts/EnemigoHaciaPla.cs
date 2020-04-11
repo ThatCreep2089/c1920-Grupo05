@@ -7,10 +7,12 @@ public class EnemigoHaciaPla : MonoBehaviour
     //Si te pones detrás deja de funcionar porque el vector pasa a ser negativo//
     //Posible solución, poner si dir.x es mayor o menos que rangoDeAtaque +1 aprox//
     public Vector2 movimientoEnemigo;
-    Rigidbody2D rb;
-    public float rangoDeAtaque;
+	public float rangoDeAtaque;
+
+	Rigidbody2D rb;
     Transform playert;
     Animator anim;
+
     private void Start()
     {
         rb = GetComponentInParent<Rigidbody2D>();
@@ -29,12 +31,13 @@ public class EnemigoHaciaPla : MonoBehaviour
             if (ataque != null)
             {
                 rb.velocity = Vector2.zero;
-                anim.SetBool("Walking", false);
+
+				if(anim != null)
+					anim.SetBool("Walking", false);
+
                 ataque.enabled = true;
             }
         }
-        //Debug.Log(Mathf.Abs(distancia));
-        //Debug.Log("dir.x = " + dir.x);
     }
     //Guardamos el transform del player para encontrar el vector director//
     private void OnTriggerEnter2D(Collider2D collision)

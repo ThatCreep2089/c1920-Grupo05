@@ -10,6 +10,7 @@ public class RangoV : MonoBehaviour
     Tripas tripas;
     Animator anim;
     Flip2 gira;
+	Stinky stinky;
     private void Awake()
     {
         dispara = GetComponent<DisparoEnemigo>();
@@ -17,12 +18,15 @@ public class RangoV : MonoBehaviour
         oscila = GetComponentInParent<Oscilate>();
         tripas = GetComponent<Tripas>();
         gira = GetComponent<Flip2>();
-        anim = transform.GetComponentInParent<Animator>();
+		stinky = GetComponent<Stinky>();
+		anim = transform.GetComponentInParent<Animator>();
     }
     //Comprobamos que tipo de enemigo es y en función de ello hacemos una cosa u otra//
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (dispara != null)
+		
+
+		if (dispara != null)
         {
             dispara.enabled = true;
             anim.SetBool("Atacando", true);
@@ -31,13 +35,18 @@ public class RangoV : MonoBehaviour
         {
             moverse.enabled = true;
 
-            //animacion de movimiento
-            anim.SetBool("Walking", true);
+			
+			//animacion de movimiento
+			if (anim != null)
+			  anim.SetBool("Walking", true);
 
         }
         else if (oscila != null) oscila.enabled = true;
         else if (tripas != null) tripas.enabled = true;
-        if (gira != null) gira.enabled = true;
+
+		//Son componentes que se deberán activar si o si alguno de los anteriores ha sido activados(else if's)
+		if (stinky != null) stinky.enabled = true;
+		if (gira != null) gira.enabled = true;
     }
     private void OnTriggerExit2D(Collider2D other)
     {
@@ -54,6 +63,9 @@ public class RangoV : MonoBehaviour
             parent.velocity = Vector2.zero;
         }
         else if (oscila != null) oscila.enabled = false;
-        if (gira != null) gira.enabled=false;
+		else if (stinky != null) stinky.enabled = false;
+
+		//Especial
+		if (gira != null) gira.enabled=false;
     }
 }

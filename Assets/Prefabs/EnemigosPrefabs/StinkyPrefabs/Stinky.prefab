@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5403504929201341208}
+  - component: {fileID: 8841983165774454709}
   - component: {fileID: 5403504929201341215}
   - component: {fileID: 5403504929201341209}
-  - component: {fileID: 5403504929201341214}
   - component: {fileID: 5403504929201341212}
   m_Layer: 10
   m_Name: CampoVision
@@ -34,6 +34,32 @@ Transform:
   m_Father: {fileID: 5403504929210946710}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &8841983165774454709
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5403504929201341211}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 30, y: 20}
+  m_EdgeRadius: 0
 --- !u!114 &5403504929201341215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,22 +86,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movimientoEnemigo: {x: 1, y: 1}
   rangoDeAtaque: 10
---- !u!58 &5403504929201341214
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5403504929201341211}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 15
 --- !u!114 &5403504929201341212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,13 +93,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5403504929201341211}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d333e302a804b947b0477f05229da7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nubeGas: {fileID: 5890067834038982808, guid: 014b6fa2b572e1c408f6dde5f4920c15, type: 3}
-  tiempoDanyo: 5
+  distanceGas: 4
+  tiempoDanyo: 1
+  nubeGasPrefab: {fileID: 5890067834038982808, guid: 014b6fa2b572e1c408f6dde5f4920c15,
+    type: 3}
 --- !u!1 &5403504929210946717
 GameObject:
   m_ObjectHideFlags: 0
@@ -102,7 +114,6 @@ GameObject:
   - component: {fileID: 5403504929210946705}
   - component: {fileID: 5403504929210946704}
   - component: {fileID: 5403504929210946707}
-  - component: {fileID: 5403504929210946706}
   - component: {fileID: 5403504929210946711}
   m_Layer: 10
   m_Name: Stinky
@@ -222,18 +233,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.6666667, y: 2.6666667}
   m_EdgeRadius: 0
---- !u!114 &5403504929210946706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5403504929210946717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e50f30399ddb4ba4098c0041a29127ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5403504929210946711
 MonoBehaviour:
   m_ObjectHideFlags: 0

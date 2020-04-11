@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5890067834038982791}
   - component: {fileID: 5890067834038982788}
   - component: {fileID: 5890067834038982789}
-  - component: {fileID: 6788796017546301645}
+  - component: {fileID: 1040790443890972595}
   m_Layer: 0
   m_Name: StinkyGas
   m_TagString: Untagged
@@ -89,16 +89,16 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5890067834038982808}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 7.5
---- !u!114 &6788796017546301645
+  m_Radius: 5.7
+--- !u!114 &1040790443890972595
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5890067834038982808}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26611be7e066fb7418b9aaf86eeeae98, type: 3}
+  m_Script: {fileID: 11500000, guid: 10c0a1f5d3f9125479d2778bd01adf03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   danyo: 1
