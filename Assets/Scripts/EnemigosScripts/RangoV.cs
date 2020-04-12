@@ -11,6 +11,7 @@ public class RangoV : MonoBehaviour
     Animator anim;
     Flip2 gira;
 	Stinky stinky;
+
     private void Awake()
     {
         dispara = GetComponent<DisparoEnemigo>();
