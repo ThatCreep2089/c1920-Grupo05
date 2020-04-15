@@ -241,7 +241,7 @@ TextureImporter:
     second: Avaricia1_surface
   - first:
       213: 3267197596800765083
-    second: Avaricia1_surface1
+    second: BackFill4
   - first:
       213: 4136325135557695011
     second: Avaricia1_80
@@ -256,7 +256,7 @@ TextureImporter:
     second: Avaricia1_surface3
   - first:
       213: 9131481586144910254
-    second: Avaricia1_surface4
+    second: BackFill5
   - first:
       213: -5056436804527559999
     second: Avaricia1_85
@@ -280,7 +280,7 @@ TextureImporter:
     second: Avaricia1_91
   - first:
       213: 252489844957417086
-    second: Avaricia1_92
+    second: BackFill3
   - first:
       213: 4385685468423598724
     second: Avaricia1_93
@@ -346,10 +346,10 @@ TextureImporter:
     second: Avaricia1_InnerCornerLeftBot
   - first:
       213: 7014467170755143430
-    second: Avaricia1_114
+    second: BackFill2
   - first:
       213: 6016601269436882915
-    second: Avaricia1_115
+    second: BackFill8
   - first:
       213: -3416687951378288510
     second: Avaricia1_InnerCornerRigBot
@@ -2621,7 +2621,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Avaricia1_surface1
+      name: BackFill4
       rect:
         serializedVersion: 2
         x: 320
@@ -2726,7 +2726,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Avaricia1_surface4
+      name: BackFill5
       rect:
         serializedVersion: 2
         x: 400
@@ -2894,7 +2894,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Avaricia1_92
+      name: BackFill3
       rect:
         serializedVersion: 2
         x: 544
@@ -3356,7 +3356,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Avaricia1_114
+      name: BackFill2
       rect:
         serializedVersion: 2
         x: 208
@@ -3377,7 +3377,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Avaricia1_115
+      name: BackFill8
       rect:
         serializedVersion: 2
         x: 592
