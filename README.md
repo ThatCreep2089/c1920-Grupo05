@@ -1,3 +1,3 @@
+# (101)2Â©
 ##FRAGILE GAME
-# (101)2©
 Funcionalidades
