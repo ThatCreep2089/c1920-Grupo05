@@ -39,16 +39,8 @@ public class Knockback : MonoBehaviour
 		if (test2 && PlayerMove != null && !PlayerMove.enabled)
 		{
 			PlayerMove.enabled = true;
-			test2 = false;
+			test2 = false; //test sirve para que active el playerMove solo cuando ha habido Knoback
 		}
 	}
-	///<summar>
-	///A ver trozo de mierda, tienes que hacer que cada vez que choque con un enemigo, se reciba el punto de contacto normal y llamar al metodo
-	///del knockback. En el Danyo o en la vida, o el propio PlayerMovement pero tiene que ser en un collisionEnter.
-	///Tambien hay que mirar que no hay input y reiniciar éste cuando se llama al metodo, porque sino al volver al activar el iput, éstos se guardan.
-	///Ademas de tambien desactivar el knockback solo cuando el jugador aterrice.
-	/// 
-	/// </summar>
-
 	#endregion
 }
