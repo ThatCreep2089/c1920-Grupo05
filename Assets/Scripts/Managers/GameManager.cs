@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
@@ -20,6 +20,11 @@ public class GameManager : MonoBehaviour
     //Metodo que destruye el gameobject del jugador
     public void Morir(GameObject personaje)
     {
+        if (personaje.GetComponent<PlayerMovement>()) ChangeScene("Main Menu");
         Destroy(personaje);
+    }
+    private void ChangeScene(string name)
+    {
+        SceneManager.LoadScene(name);
     }
 }
