@@ -4,53 +4,51 @@ public class Knockback : MonoBehaviour
 {
 
 	#region Variables
-	public bool knockBack;
-	public float thrust;
-	public float timer;
-    
-	float count;
-    float guardaThrusts;
+
+	Vector2 directionX, directionY = Vector2.up;
+	bool test2;
 	Rigidbody2D rb;
 	PlayerMovement PlayerMove;
 	#endregion
 
 	#region Unity Methods
-	void Start()
-	{
-		rb = GetComponent<Rigidbody2D>();
-		PlayerMove = GetComponentInChildren<PlayerMovement>();
-	}
+
     private void Awake()
     {
-        guardaThrusts = thrust;
-    }
+		rb = GetComponentInParent<Rigidbody2D>();
+		PlayerMove = GetComponentInParent<PlayerMovement>();
+	}
 
-    void Update()
+	public void Impulso(Vector2 dir, float  thrustX, float thrustY)
 	{
-		if (knockBack)
-		{
-			count = timer;
-			knockBack = !knockBack;
-			PlayerMove.enabled = false; //desactivo cualquier tipo de input, o incluso el input nulo que es 0, para permitir el empuje
-			//Ahora habria que poner segun el punto de contacto, hacia donde empujar.           
-			rb.AddForce(transform.right * -thrust);
-			rb.AddForce(transform.up * thrust);
-            thrust = guardaThrusts;
-		}
+		directionX = new Vector2(dir.x,0);
+		//count = timer;
+		PlayerMove.DesactivateInput();
+		PlayerMove.enabled = false;
+		
+		rb.velocity = Vector2.zero; //Desactivo la velocidad para evitar que la que lleva, se sume a la del impulso.
+		//Se aplica el empuje
+		rb.AddForce(directionX * thrustX);
+		rb.AddForce(directionY * thrustY);
 
-		if(count >= 0)
-		{
-			//Mientras sufre el empuje, se va deslizando, por lo que hay que controlar que no se desplace de más con un timer
-			count -= Time.deltaTime;
+		test2 = true;
+	}
 
-		}
-		else
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		if (test2 && PlayerMove != null && !PlayerMove.enabled)
 		{
-			//Para evitar que continue deslizandose, activo el input del jugador, por lo que tambien se activa el input 0 estático.
-			if(PlayerMove != null)
-				PlayerMove.enabled = true;
+			PlayerMove.enabled = true;
+			test2 = false;
 		}
 	}
+	///<summar>
+	///A ver trozo de mierda, tienes que hacer que cada vez que choque con un enemigo, se reciba el punto de contacto normal y llamar al metodo
+	///del knockback. En el Danyo o en la vida, o el propio PlayerMovement pero tiene que ser en un collisionEnter.
+	///Tambien hay que mirar que no hay input y reiniciar éste cuando se llama al metodo, porque sino al volver al activar el iput, éstos se guardan.
+	///Ademas de tambien desactivar el knockback solo cuando el jugador aterrice.
+	/// 
+	/// </summar>
 
 	#endregion
 }

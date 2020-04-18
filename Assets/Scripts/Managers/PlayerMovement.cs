@@ -107,6 +107,13 @@ public class PlayerMovement : MonoBehaviour
 	#endregion
 
 	#region Personal Methods
+
+	public void DesactivateInput()
+	{
+		//Apesar de desactivar el componente entero, los datos de XMove se quedan con los ultimos valores, y a veces se queda pillada la anim.
+		horizontalMovement = 0;
+		anim.SetFloat("xMove", Mathf.Abs(horizontalMovement));
+	}
 	#endregion
 
 }

@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 4127188912284960952}
   - component: {fileID: 4127188912284960899}
   - component: {fileID: 8192088369384988094}
+  - component: {fileID: 4618504462452008577}
   m_Layer: 10
   m_Name: Rata
   m_TagString: Untagged
@@ -156,8 +157,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1848984403
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 323693096002886931, guid: d9c936adf63ce9448a72f247fe777281, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -249,3 +250,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   danyo: 1
+  thrust: {x: 350, y: 350}
+--- !u!114 &4618504462452008577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4127188912284960953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88f5cb3a5238ae2449585823cb8b0211, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  salud: 2

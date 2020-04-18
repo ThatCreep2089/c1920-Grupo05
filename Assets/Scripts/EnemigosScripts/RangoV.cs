@@ -25,8 +25,6 @@ public class RangoV : MonoBehaviour
     //Comprobamos que tipo de enemigo es y en función de ello hacemos una cosa u otra//
     private void OnTriggerEnter2D(Collider2D collision)
     {
-		
-
 		if (dispara != null)
         {
             dispara.enabled = true;
