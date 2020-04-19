@@ -2,6 +2,7 @@
 
 public class Vida : MonoBehaviour
 {
+    Disparar disparoPlayer;
     Animator anim;
     DisparoEnemigo dispara;
     EnemigoHaciaPla moverse;
@@ -12,6 +13,7 @@ public class Vida : MonoBehaviour
 
 	private void Start()
     {
+        disparoPlayer = GetComponent<Disparar>();
         dispara = GetComponentInChildren<DisparoEnemigo>();
         moverse = GetComponentInChildren<EnemigoHaciaPla>();
 		knockback = GetComponentInChildren<Knockback>();
@@ -61,5 +63,10 @@ public class Vida : MonoBehaviour
 			Destroy(gameObject.transform.GetChild(i).gameObject);
 		}
 	}
-	#endregion
+
+    public void NoShoot()
+    {
+        disparoPlayer.enabled = false;
+    }
+    #endregion
 }

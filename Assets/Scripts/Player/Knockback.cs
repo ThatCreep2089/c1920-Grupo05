@@ -23,7 +23,7 @@ public class Knockback : MonoBehaviour
 	{
 		directionX = new Vector2(dir.x,0);
 		//count = timer;
-		PlayerMove.DesactivateInput();
+		//PlayerMove.DesactivateInput();
 		PlayerMove.enabled = false;
 		
 		rb.velocity = Vector2.zero; //Desactivo la velocidad para evitar que la que lleva, se sume a la del impulso.
