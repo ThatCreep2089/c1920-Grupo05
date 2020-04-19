@@ -38,18 +38,10 @@ public class PlayerMovement : MonoBehaviour
 		//Inicializo una cuenta regresiva.
 		if (Input.GetButtonDown("Jump") && isInRest)
 		{
-			anim.ResetTrigger("isLanding");
-			#region ResetTrigger?
-			//Por motivos de  animaciones de Unity, los triggers son llamados justo cuando son activados. No obstante, se "consumen"
-			//solo si pasan por el sitio por donde sirve su valor activo. Por este motivo, si activamos dicho trigger en "Idle" su valor se guardará
-			//hasta llegar a la transicion donde es necesaria y eso puede provocar comportamientos raros. Por lo que hay que resetear su valor cada vez que 
-			//presionamos el salto, que es el origen del proceso(salto - aterrizaje).
-			#endregion
-
 			rbParent.velocity = Vector2.up * jumpForce;
 			isJumping = true;//isInRest se vuelve falso al dejar de tocar el suelo en el OnTriggerExit2D.
 
-			anim.SetTrigger("isJumping");//Comienza la animación de salto.
+			anim.SetBool("isJumping", true);//Comienza la animación de salto.
 			jumpCounter = jumpTime;
 		}
 		//Si mantengo el salto, es que he dejado de tocar el suelo y empieza una cuenta regresiva.
@@ -64,17 +56,12 @@ public class PlayerMovement : MonoBehaviour
 			else
 			{
 				isJumping = false;
-				anim.SetTrigger("isFalling"); //Si se le acaba el tiempo, empieza la animacion de caida.
 			}
 		}
 		//En caso de que suelte el boton de saltar, no podre volver a
 		//saltar hasta que esté en el suelo.
 		if (!Input.GetButton("Jump"))
-			isJumping = false;	
-
-		if(Input.GetButtonUp("Jump") && !isInRest)
-			anim.SetTrigger("isFalling");//Si suelta el boton de salto antes de que se acabe el tiempo, empieza la animacion de caida.
-
+			isJumping = false;
 		#endregion
 
 		#region Horizontal
@@ -93,7 +80,8 @@ public class PlayerMovement : MonoBehaviour
 	{
 		if (!isInRest && !isJumping)
 		{
-			anim.SetTrigger("isLanding"); //Si al colisionar con el suelo, no esta en reposo, empieza la animacion de aterrizaje
+			anim.SetBool("isJumping", false);
+			anim.SetBool("isFalling", false);
 		}
 		isInRest = true;
 	}
@@ -102,18 +90,7 @@ public class PlayerMovement : MonoBehaviour
 	{
 		isInRest = false;
 		if(!isJumping)
-			anim.SetTrigger("isFalling"); //Si sale de una plataforma y no esta saltando, empieza la animacion de caida.
+			anim.SetBool("isFalling", true); //Si sale de una plataforma y no esta saltando, empieza la animacion de caida.
 	}
 	#endregion
-
-	#region Personal Methods
-
-	public void DesactivateInput()
-	{
-		//Apesar de desactivar el componente entero, los datos de XMove se quedan con los ultimos valores, y a veces se queda pillada la anim.
-		horizontalMovement = 0;
-		anim.SetFloat("xMove", Mathf.Abs(horizontalMovement));
-	}
-	#endregion
-
 }
