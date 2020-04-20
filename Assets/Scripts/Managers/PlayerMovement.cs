@@ -11,12 +11,14 @@ public class PlayerMovement : MonoBehaviour
 	public float jumpTime;
 	[Header("Run Parameters")]
 	//runVelocity  en el movimiento horizontal
-	public int runVelocity = 15;
-
+	public float runVelocity = 15;
+	[Range(0,1)]
+	public float velocityReduction;
 	Animator anim;
 	Rigidbody2D rbParent;
 	Transform parent;
-	float jumpCounter;
+
+	float jumpCounter, slowedVelocity, savedSpeed;
 	float horizontalMovement;
 	bool isJumping = false;
 	bool isInRest = true;
@@ -26,6 +28,9 @@ public class PlayerMovement : MonoBehaviour
 
 	void Awake()
 	{
+		slowedVelocity = runVelocity - runVelocity * velocityReduction;// Casi mejor hacer el calculo al principio, que hacerlo cada vez que salta.
+		savedSpeed = runVelocity; //almaceno la velocidad inicial para restaurarla luego.
+
 		rbParent = GetComponentInParent<Rigidbody2D>();
 		parent = transform.parent;
 		anim = GetComponentInParent<Animator>();
@@ -40,6 +45,8 @@ public class PlayerMovement : MonoBehaviour
 		{
 			rbParent.velocity = Vector2.up * jumpForce;
 			isJumping = true;//isInRest se vuelve falso al dejar de tocar el suelo en el OnTriggerExit2D.
+
+			ReduceXSpeed();//reduzco la velocidad en el aire.
 
 			anim.SetBool("isJumping", true);//Comienza la animación de salto.
 			jumpCounter = jumpTime;
@@ -83,6 +90,8 @@ public class PlayerMovement : MonoBehaviour
 			anim.SetBool("isJumping", false);
 			anim.SetBool("isFalling", false);
 		}
+
+		ResetSpeed();
 		isInRest = true;
 	}
 
@@ -91,6 +100,18 @@ public class PlayerMovement : MonoBehaviour
 		isInRest = false;
 		if(!isJumping)
 			anim.SetBool("isFalling", true); //Si sale de una plataforma y no esta saltando, empieza la animacion de caida.
+	}
+	#endregion
+
+	#region AuxMethods
+	public void ReduceXSpeed()
+	{
+		runVelocity = slowedVelocity;
+	}
+
+	public void ResetSpeed()
+	{
+		runVelocity = savedSpeed;
 	}
 	#endregion
 }

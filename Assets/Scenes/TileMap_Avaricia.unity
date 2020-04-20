@@ -97341,6 +97341,11 @@ PrefabInstance:
       propertyPath: thrust
       value: 350
       objectReference: {fileID: 0}
+    - target: {fileID: 3348279148157765005, guid: 1edbdf53195575d4e858262d9ce26513,
+        type: 3}
+      propertyPath: velocityReduction
+      value: 0.3
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 558819125342461111, guid: 1edbdf53195575d4e858262d9ce26513, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1edbdf53195575d4e858262d9ce26513, type: 3}
