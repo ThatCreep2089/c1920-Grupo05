@@ -89,6 +89,7 @@ public class PlayerMovement : MonoBehaviour
 		{
 			anim.SetBool("isJumping", false);
 			anim.SetBool("isFalling", false);
+			anim.SetTrigger("OnLand");
 		}
 
 		ResetSpeed();
