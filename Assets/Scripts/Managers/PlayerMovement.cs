@@ -45,9 +45,7 @@ public class PlayerMovement : MonoBehaviour
 		{
 			rbParent.velocity = Vector2.up * jumpForce;
 			isJumping = true;//isInRest se vuelve falso al dejar de tocar el suelo en el OnTriggerExit2D.
-
-			ReduceXSpeed();//reduzco la velocidad en el aire.
-
+				
 			anim.SetBool("isJumping", true);//Comienza la animación de salto.
 			jumpCounter = jumpTime;
 		}
@@ -99,7 +97,9 @@ public class PlayerMovement : MonoBehaviour
 	private void OnTriggerExit2D(Collider2D collision)
 	{
 		isInRest = false;
-		if(!isJumping)
+		ReduceXSpeed();//reduzco la velocidad en el aire.
+
+		if (!isJumping)
 			anim.SetBool("isFalling", true); //Si sale de una plataforma y no esta saltando, empieza la animacion de caida.
 	}
 	#endregion
