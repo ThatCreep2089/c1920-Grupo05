@@ -7,13 +7,13 @@ public class FlipMimico : MonoBehaviour
     Rigidbody2D rb;
     Transform trans;
     Animator anim;
-    EnemigoHaciaPla moverse;
+	EnemigoToPlayer moverse;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         trans = GetComponent<Transform>();
         anim = GetComponent<Animator>();
-        moverse = GetComponentInChildren<EnemigoHaciaPla>();
+        moverse = GetComponentInChildren<EnemigoToPlayer>();
     }
     //Comprueba si va hacia atrás y le da la vuelta en x//
     private void Update()

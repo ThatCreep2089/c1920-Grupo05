@@ -5,20 +5,20 @@ using UnityEngine;
 public class RangoV : MonoBehaviour
 {
     DisparoEnemigo dispara;
-    EnemigoHaciaPla moverse;
+	EnemigoToPlayer moverse;
     Oscilate oscila;
     Tripas tripas;
     Animator anim;
-    Flip2 gira;
+	Flip gira;
 	Stinky stinky;
 
     private void Awake()
     {
         dispara = GetComponent<DisparoEnemigo>();
-        moverse = GetComponent<EnemigoHaciaPla>();
+        moverse = GetComponent<EnemigoToPlayer>();
         oscila = GetComponentInParent<Oscilate>();
         tripas = GetComponent<Tripas>();
-        gira = GetComponent<Flip2>();
+        gira = GetComponent<Flip>();
 		stinky = GetComponent<Stinky>();
 		anim = transform.GetComponentInParent<Animator>();
     }

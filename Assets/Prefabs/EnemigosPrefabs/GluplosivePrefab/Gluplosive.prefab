@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8032602158953439633}
   - component: {fileID: 8182525947409053864}
   - component: {fileID: 3312917908833666273}
+  - component: {fileID: 8240490712516018534}
   m_Layer: 13
   m_Name: RangoV
   m_TagString: Untagged
@@ -85,6 +86,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b58f374f03efedd42a7e5113d0753e68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8240490712516018534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976230778508599849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e831ec6748760b4fab94cfd9172c78e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3962999481133704132
 GameObject:
   m_ObjectHideFlags: 0
@@ -98,7 +111,6 @@ GameObject:
   - component: {fileID: 8750958184007587006}
   - component: {fileID: 1756386709356021682}
   - component: {fileID: 6841370374540495172}
-  - component: {fileID: 7363001935010042143}
   - component: {fileID: 6970449065039148455}
   - component: {fileID: 8549558960405428772}
   - component: {fileID: 837841924666235277}
@@ -231,18 +243,6 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c2625616e7c3c84fac6f2c335caf587, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &7363001935010042143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3962999481133704132}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30227da790760ba40946fddc74a1bfdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &6970449065039148455

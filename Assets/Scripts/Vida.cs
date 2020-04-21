@@ -5,7 +5,7 @@ public class Vida : MonoBehaviour
     Disparar disparoPlayer;
     Animator anim;
     DisparoEnemigo dispara;
-    EnemigoHaciaPla moverse;
+	EnemigoToPlayer moverse;
 	Knockback knockback;
 
 	public int salud;
@@ -15,7 +15,7 @@ public class Vida : MonoBehaviour
     {
         disparoPlayer = GetComponent<Disparar>();
         dispara = GetComponentInChildren<DisparoEnemigo>();
-        moverse = GetComponentInChildren<EnemigoHaciaPla>();
+        moverse = GetComponentInChildren<EnemigoToPlayer>();
 		knockback = GetComponentInChildren<Knockback>();
 
 		anim = transform.GetComponent<Animator>();

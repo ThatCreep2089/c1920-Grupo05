@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 1157352967221843064}
   - component: {fileID: 1113044322764366867}
   - component: {fileID: 8072037617956156488}
-  - component: {fileID: 8658882859794540195}
   - component: {fileID: 8091249411465850915}
   m_Layer: 10
   m_Name: Armadura
@@ -195,18 +194,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salud: 3
---- !u!114 &8658882859794540195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3186327881865196589}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30227da790760ba40946fddc74a1bfdb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8091249411465850915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,6 +218,7 @@ GameObject:
   - component: {fileID: 3186327883083182534}
   - component: {fileID: 3186327883083182533}
   - component: {fileID: 3186327883083182532}
+  - component: {fileID: 4181746993554364049}
   m_Layer: 13
   m_Name: CampoV
   m_TagString: Untagged
@@ -302,5 +290,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b58f374f03efedd42a7e5113d0753e68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4181746993554364049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3186327883083182528}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e831ec6748760b4fab94cfd9172c78e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

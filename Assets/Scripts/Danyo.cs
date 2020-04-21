@@ -29,7 +29,7 @@ public class Danyo : MonoBehaviour
 				dirKnock = Vector2.right;
 			else dirKnock = Vector2.left;
 
-			print(dirKnock);
+
 			if (knockback != null)
 				knockback.Impulso(dirKnock, thrust.x, thrust.y);
 

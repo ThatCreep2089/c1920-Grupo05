@@ -4,18 +4,29 @@ using UnityEngine;
 
 public class Flip : MonoBehaviour
 {
-    Rigidbody2D rb;
-    Transform trans;
+    Transform player, enemigo;
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        player = collision.gameObject.GetComponent<Transform>();
+    }
     private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
-        trans = GetComponent<Transform>();
+        enemigo = transform.parent;
     }
-    //Comprueba si va hacia atrás y le da la vuelta en x//
     private void Update()
     {
-        //Doble condición para comprobar si está mirando para un lado o para otro//
-        if (rb.velocity.x < 0 && trans.localScale.x>0) trans.localScale = new Vector3(-trans.localScale.x, trans.localScale.y, trans.localScale.z);
-        else if(rb.velocity.x > 0 && trans.localScale.x < 0) trans.localScale = new Vector3(-trans.localScale.x, trans.localScale.y, trans.localScale.z);
-    } 
+        if (player != null)
+        {
+            bool enemigohaciaiz = player.position.x > transform.position.x && DireccionEnemigo() < 0;
+            bool enemigohaciader = player.position.x < transform.position.x && DireccionEnemigo() > 0;
+            if (enemigohaciader || enemigohaciaiz)
+            {
+                enemigo.localScale = new Vector3(-enemigo.localScale.x, enemigo.localScale.y, enemigo.localScale.z);
+            }
+        }       
+    }
+    private float DireccionEnemigo()
+    {//Devulve si mira hacia la izquierda o la derecha//
+        return enemigo.localScale.x;
+    }
 }

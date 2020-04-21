@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4127188911254855822}
   - component: {fileID: 4127188911254855821}
   - component: {fileID: 4127188911254855820}
+  - component: {fileID: 3778168128758006896}
   m_Layer: 13
   m_Name: RangoV
   m_TagString: Untagged
@@ -85,6 +86,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movimientoEnemigo: {x: 20, y: 0}
   rangoDeAtaque: 0
+--- !u!114 &3778168128758006896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4127188911254855808}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e831ec6748760b4fab94cfd9172c78e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4127188912284960953
 GameObject:
   m_ObjectHideFlags: 0
