@@ -61,22 +61,33 @@ public class PlayerMovement : MonoBehaviour
 			else
 			{
 				isJumping = false;
+				ReduceXSpeed();//reduzco la velocidad en el aire, solo cuando está cayendo
 			}
 		}
 		//En caso de que suelte el boton de saltar, no podre volver a
 		//saltar hasta que esté en el suelo.
-		if (!Input.GetButton("Jump"))
+		if (isJumping && !Input.GetButton("Jump")) //solamente se aplica cuando se ha saltado y dejo de presionar.
+		{
 			isJumping = false;
+			ReduceXSpeed();//reduzco la velocidad en el aire, solo cuando está cayendo
+		}
+			
 		#endregion
-
+		
+		//Se detecta el input en cada frame y se ejecuta la animacion del jugador.
 		#region Horizontal
-		horizontalMovement = runVelocity * Input.GetAxisRaw("Horizontal");
+		horizontalMovement = runVelocity * Input.GetAxis("Horizontal");
 		anim.SetFloat("xMove", Mathf.Abs(horizontalMovement));
+		#endregion
+	}
 
+	private void FixedUpdate()
+	{
+		//Se aplica el input a la velocidad en cada paso físico.
+		#region Horizontal
 		rbParent.velocity = new Vector2(horizontalMovement, rbParent.velocity.y);
 
 		if (rbParent.velocity.x > 0) parent.localScale = new Vector3(1, 1, 1);
-
 		if (rbParent.velocity.x < 0) parent.localScale = new Vector3(-1, 1, 1);
 		#endregion
 	}
@@ -97,7 +108,6 @@ public class PlayerMovement : MonoBehaviour
 	private void OnTriggerExit2D(Collider2D collision)
 	{
 		isInRest = false;
-		ReduceXSpeed();//reduzco la velocidad en el aire.
 
 		if (!isJumping)
 			anim.SetBool("isFalling", true); //Si sale de una plataforma y no esta saltando, empieza la animacion de caida.
