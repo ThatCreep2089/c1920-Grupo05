@@ -71,10 +71,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf7c142c17b7bac46832ac4273097a0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 10
+  jumpForce: 15
   jumpTime: 0.4
   runVelocity: 15
-  velocityReduction: 0
+  velocityReduction: 0.4
 --- !u!114 &1546223552130400210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,10 +140,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1.5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 3
+  m_GravityScale: 4
   m_Material: {fileID: 6200000, guid: 6567ae962f87f514c824d13eb82049e7, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -173,7 +173,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.03, y: 3.98}
+  m_Size: {x: 2, y: 3.98}
   m_EdgeRadius: 0
 --- !u!212 &3348279149137609441
 SpriteRenderer:
