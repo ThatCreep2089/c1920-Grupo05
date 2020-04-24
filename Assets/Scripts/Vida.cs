@@ -7,6 +7,7 @@ public class Vida : MonoBehaviour
     DisparoEnemigo dispara;
 	EnemigoToPlayer moverse;
 	Knockback knockback;
+	Danyo damage;
 
 	public int salud;
 	Vector2 dirKnock;
@@ -17,6 +18,7 @@ public class Vida : MonoBehaviour
         dispara = GetComponentInChildren<DisparoEnemigo>();
         moverse = GetComponentInChildren<EnemigoToPlayer>();
 		knockback = GetComponentInChildren<Knockback>();
+		damage = GetComponent<Danyo>();
 
 		anim = transform.GetComponent<Animator>();
     }
@@ -34,6 +36,8 @@ public class Vida : MonoBehaviour
         {
 			if (knockback != null)         //El KnockBack Interrumpe la anim de muerte. Aun hay que hacer arreglos para que funcione mejor.
 				knockback.enabled = false;
+			if (damage != null)
+				damage.enabled = false;
 
             if(dispara != null)             //para que no se mueva ni dispare en los primeros frames de la animacion de muerte.
             {

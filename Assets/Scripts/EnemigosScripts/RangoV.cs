@@ -11,6 +11,7 @@ public class RangoV : MonoBehaviour
     Animator anim;
 	Flip gira;
 	Stinky stinky;
+	Dragon dragon;
 
     private void Awake()
     {
@@ -21,27 +22,28 @@ public class RangoV : MonoBehaviour
         gira = GetComponent<Flip>();
 		stinky = GetComponent<Stinky>();
 		anim = transform.GetComponentInParent<Animator>();
-    }
+		dragon = GetComponentInParent<Dragon>();
+	}
     //Comprobamos que tipo de enemigo es y en función de ello hacemos una cosa u otra//
     private void OnTriggerEnter2D(Collider2D collision)
     {
 		if (dispara != null)
-        {
-            dispara.enabled = true;
-            anim.SetBool("Atacando", true);
-        }
-        else if (moverse != null)
-        {
-            moverse.enabled = true;
+		{
+			dispara.enabled = true;
+			anim.SetBool("Atacando", true);
+		}
+		else if (moverse != null)
+		{
+			moverse.enabled = true;
 
-			
 			//animacion de movimiento
 			if (anim != null)
-			  anim.SetBool("Walking", true);
+				anim.SetBool("Walking", true);
 
-        }
-        else if (oscila != null) oscila.enabled = true;
-        else if (tripas != null) tripas.enabled = true;
+		}
+		else if (oscila != null) oscila.enabled = true;
+		else if (tripas != null) tripas.enabled = true;
+		else if (dragon != null) dragon.enabled = true;
 
 		//Son componentes que se deberán activar si o si alguno de los anteriores ha sido activados(else if's)
 		if (stinky != null) stinky.enabled = true;
@@ -49,20 +51,21 @@ public class RangoV : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (dispara != null)
-        {
-            dispara.enabled = false;
-            anim.SetBool("Atacando", false);
-        }
-        else if (moverse != null)
-        {
-            moverse.enabled = false;
-            Rigidbody2D parent;
-            parent = GetComponentInParent<Rigidbody2D>();
-            parent.velocity = Vector2.zero;
-        }
-        else if (oscila != null) oscila.enabled = false;
+		if (dispara != null)
+		{
+			dispara.enabled = false;
+			anim.SetBool("Atacando", false);
+		}
+		else if (moverse != null)
+		{
+			moverse.enabled = false;
+			Rigidbody2D parent;
+			parent = GetComponentInParent<Rigidbody2D>();
+			parent.velocity = Vector2.zero;
+		}
+		else if (oscila != null) oscila.enabled = false;
 		else if (stinky != null) stinky.enabled = false;
+		else if (dragon != null) dragon.enabled = false;
 
 		//Especial
 		if (gira != null) gira.enabled=false;

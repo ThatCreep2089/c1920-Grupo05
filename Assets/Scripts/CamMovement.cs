@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CamMovement : MonoBehaviour {
 
 	#region Variables
-	public Transform target;
-	public Vector3 offSet = new Vector3 (1,1,-1);
+	[SerializeField]Transform target = null;
+	[SerializeField]Vector3 offSet;
 	
 	//El offset es para simplificar codigo y posicionar la cámara donde quueramos pudiendo aun así seguir al jugador. Si no me crees borralo.
 
