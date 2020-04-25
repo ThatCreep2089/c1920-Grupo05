@@ -18,11 +18,6 @@ public class DanyoTrigger : MonoBehaviour
 			if (player.GetComponent<Vida>() != null && player.GetComponent<Vida>().enabled)
 			{   //Hace daño al personaje en cuestión//
 				player.GetComponent<Vida>().QuitaVida(danyo);
-
-				//Comprobamos que sea el jugador y le aplicamos daño e invulnerabilidad//
-				playerInv = player.GetComponent<Invulnerable>(); //AVISO: la invulnerabilidad no se activa//
-				if (player != null && playerInv != null)
-					playerInv.enabled = true;
 			}
 			contador = 0;
 		}
