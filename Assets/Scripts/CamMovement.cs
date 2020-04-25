@@ -4,11 +4,9 @@ public class CamMovement : MonoBehaviour {
 
 	#region Variables
 	[SerializeField]Transform target = null;
-	[SerializeField]Vector3 offSet;
+	[SerializeField]Vector3 offSet = Vector3.zero;
 	
 	//El offset es para simplificar codigo y posicionar la cámara donde quueramos pudiendo aun así seguir al jugador. Si no me crees borralo.
-
-
 	#endregion
 
 	#region Unity Methods

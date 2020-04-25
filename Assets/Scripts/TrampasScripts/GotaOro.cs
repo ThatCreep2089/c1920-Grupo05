@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GotaOro : MonoBehaviour
 {
-    PlayerMovement ply;
+    PlayerMovement player;
     bool reducir = false;
     const float tiempoReducir = 2;
     float contador = 0;
@@ -17,20 +15,21 @@ public class GotaOro : MonoBehaviour
             if (contador >= tiempoReducir)
             {
                 contador = 0;
-                ply.runVelocity += velocidadReducida; //Le devuelve la velocidad inicial
+                player.runVelocity += velocidadReducida; //Le devuelve la velocidad inicial
                 Destroy(this.gameObject);
             }
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.GetComponentInChildren<PlayerMovement>() != null)
+		player = collision.gameObject.GetComponentInChildren<PlayerMovement>();
+
+		if ( player!= null)
         {
-            ply = collision.gameObject.GetComponentInChildren<PlayerMovement>();
             reducir = true; //Con esto empieza el contador para dejar de slowear al jugador
-            ply.runVelocity -= velocidadReducida; //Reduce la velocidad del jugador
+            player.runVelocity -= velocidadReducida; //Reduce la velocidad del jugador
             gameObject.GetComponent<Collider2D>().enabled = false; //Con estas dos lineas hacemos el objeto invisible e intangible para que de tiempo a recuperar la velocidad del jugador
-            gameObject.GetComponent<MeshRenderer>().enabled = false; //Esto será sprite renderer
+            gameObject.GetComponent<SpriteRenderer>().enabled = false; //Esto será sprite renderer
         }
     }
 }

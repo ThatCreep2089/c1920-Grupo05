@@ -18,7 +18,7 @@ public class Vida : MonoBehaviour
         dispara = GetComponentInChildren<DisparoEnemigo>();
         moverse = GetComponentInChildren<EnemigoToPlayer>();
 		knockback = GetComponentInChildren<Knockback>();
-		damage = GetComponent<Danyo>();
+		damage = gameObject.GetComponent<Danyo>();
 
 		anim = transform.GetComponent<Animator>();
     }
@@ -27,7 +27,7 @@ public class Vida : MonoBehaviour
     {
         salud -= danyo;
 
-        if (gameObject.GetComponentInChildren<PlayerMovement>() != null)
+        if (salud >0 && gameObject.GetComponentInChildren<PlayerMovement>() != null)
         {
             UIManager.instance.ReducirCorazon(danyo);
         }
@@ -36,6 +36,7 @@ public class Vida : MonoBehaviour
         {
 			if (knockback != null)         //El KnockBack Interrumpe la anim de muerte. Aun hay que hacer arreglos para que funcione mejor.
 				knockback.enabled = false;
+
 			if (damage != null)
 				damage.enabled = false;
 

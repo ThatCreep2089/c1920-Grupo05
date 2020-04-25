@@ -2,44 +2,52 @@
 
 public class Danyo : MonoBehaviour
 {
-    public int danyo;
-	public Vector2 thrust = new Vector2(350f, 350f);
+    public int danyo = 0;
+	[SerializeField] Vector2 thrust = new Vector2(350f, 350f);
+	[SerializeField] bool produceKnockBack = true;
+
 	Invulnerable playerInv;
 	Transform playerbody;
 	Animator anim;
 	Knockback knockback;
 
 	Vector2 dirKnock;
-
+	private void Start()
+	{
+		//para que un Componente se puedea desactivar, tiene que llevar el metodo Start
+	}
 	private void OnCollisionEnter2D(Collision2D collision)
     {
 		GameObject player = collision.gameObject;
-		if (collision.gameObject.GetComponentInChildren<PlayerMovement>() != null)
+		if (player.GetComponentInChildren<PlayerMovement>() != null)
 		{
 			anim = player.GetComponent<Animator>();
-			knockback = player.GetComponentInChildren<Knockback>();
-
 			#region KnockBack
-			///<summary>
-			///En verdad lo que nos interesa es que el jugador tire para la derecha o izquierda en funcion de la pos del enemigo.
-			///En cuanto a cosa como la lava, podemos indicar el thrust que queremos darle segun cual sea el enemigo, No?
-			///</summary>
+			if (produceKnockBack)
+			{
+				///<summary>
+				///Nos interesa que el jugador sea empujado a la derecha o izquierda en funcion de la pos del enemigo.
+				///</summary>
+				knockback = player.GetComponentInChildren<Knockback>();
 
-			if (transform.position.x < collision.transform.position.x)
-				dirKnock = Vector2.right;
-			else dirKnock = Vector2.left;
+				//Detectamos la posicion del jugador respecto al enemigo
+				if (transform.position.x < collision.transform.position.x)
+					dirKnock = Vector2.right;
+				else dirKnock = Vector2.left;
 
+				//Aplicamos el KnocBack
+				if (knockback != null)
+					knockback.Impulso(dirKnock, thrust.x, thrust.y);
 
-			if (knockback != null)
-				knockback.Impulso(dirKnock, thrust.x, thrust.y);
-
-			anim.SetTrigger("Knockback");
+				anim.SetTrigger("Knockback");
+					
+			}
 			#endregion
 		}
-
-		if (player.GetComponent<Vida>() != null && player.GetComponent<Vida>().enabled)
+		Vida vida = player.GetComponent<Vida>();
+		if (vida != null && vida.enabled)
 		{   //Hace daño al personaje en cuestión//
-			player.GetComponent<Vida>().QuitaVida(danyo);
+			vida.QuitaVida(danyo);
 			
 			//Comprobamos que sea el jugador y le aplicamos daño e invulnerabilidad//
 			playerInv = player.GetComponent<Invulnerable>();

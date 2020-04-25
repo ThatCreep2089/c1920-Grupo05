@@ -97,6 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   danyo: 1
   thrust: {x: 400, y: 650}
+  produceKnockBack: 0
 --- !u!61 &3926121804950929811
 BoxCollider2D:
   m_ObjectHideFlags: 0

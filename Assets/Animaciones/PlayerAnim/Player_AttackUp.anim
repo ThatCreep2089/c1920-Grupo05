@@ -23,6 +23,12 @@ AnimationClip:
       value: {fileID: -3281230052466953993, guid: e8a24a476f309ba4dbbf9c9e2bb5e0aa,
         type: 3}
     - time: 0.1
+      value: {fileID: 414978146448626793, guid: e8a24a476f309ba4dbbf9c9e2bb5e0aa,
+        type: 3}
+    - time: 0.2
+      value: {fileID: 1291833095428163813, guid: e8a24a476f309ba4dbbf9c9e2bb5e0aa,
+        type: 3}
+    - time: 0.3
       value: {fileID: -7765223779262388494, guid: e8a24a476f309ba4dbbf9c9e2bb5e0aa,
         type: 3}
     - time: 0.5
@@ -48,6 +54,8 @@ AnimationClip:
       isPPtrCurve: 1
     pptrCurveMapping:
     - {fileID: -3281230052466953993, guid: e8a24a476f309ba4dbbf9c9e2bb5e0aa, type: 3}
+    - {fileID: 414978146448626793, guid: e8a24a476f309ba4dbbf9c9e2bb5e0aa, type: 3}
+    - {fileID: 1291833095428163813, guid: e8a24a476f309ba4dbbf9c9e2bb5e0aa, type: 3}
     - {fileID: -7765223779262388494, guid: e8a24a476f309ba4dbbf9c9e2bb5e0aa, type: 3}
     - {fileID: 1291833095428163813, guid: e8a24a476f309ba4dbbf9c9e2bb5e0aa, type: 3}
   m_AnimationClipSettings:
@@ -75,7 +83,7 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0
+  - time: 0.2
     functionName: Dispara
     data: 
     objectReferenceParameter: {fileID: 0}
