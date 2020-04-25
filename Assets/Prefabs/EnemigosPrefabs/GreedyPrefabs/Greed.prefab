@@ -170,6 +170,7 @@ GameObject:
   - component: {fileID: 7667196104375792073}
   - component: {fileID: 4029056367644609606}
   - component: {fileID: 9027145386720032641}
+  - component: {fileID: -2940487646639855210}
   m_Layer: 10
   m_Name: Greed
   m_TagString: Untagged
@@ -231,7 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f5cb3a5238ae2449585823cb8b0211, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  salud: 2
+  salud: 1
 --- !u!212 &4029056367644609606
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -301,3 +302,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-2940487646639855210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8124841706002589092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10c0a1f5d3f9125479d2778bd01adf03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  danyo: 1
+  thrust: {x: 350, y: 350}
