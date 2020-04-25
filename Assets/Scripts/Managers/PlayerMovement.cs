@@ -79,7 +79,6 @@ public class PlayerMovement : MonoBehaviour
 		horizontalMovement = runVelocity * Input.GetAxis("Horizontal");
 		anim.SetFloat("xMove", Mathf.Abs(horizontalMovement));
 		#endregion
-		Debug.Log(runVelocity);
 	}
 
 	private void FixedUpdate()
@@ -127,7 +126,6 @@ public class PlayerMovement : MonoBehaviour
 	}
 	public void ReduceVelocidad()
 	{
-		Debug.Log("hola");
 		runVelocity--;
 	}
 	#endregion
