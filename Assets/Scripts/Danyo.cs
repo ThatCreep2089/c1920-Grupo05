@@ -10,7 +10,9 @@ public class Danyo : MonoBehaviour
 	Transform playerbody;
 	Animator anim;
 	Knockback knockback;
+	Vida vida, vidaPlayer;
 
+	bool makeDamage = true;
 	Vector2 dirKnock;
 	private void Start()
 	{
@@ -19,20 +21,25 @@ public class Danyo : MonoBehaviour
 	private void OnCollisionEnter2D(Collision2D collision)
     {
 		GameObject player = collision.gameObject;
-		Vida vida = gameObject.GetComponent<Vida>(); 
+		vidaPlayer = player.GetComponent<Vida>();
+		vida = gameObject.GetComponent<Vida>(); 
 		
-		//Comprobamos que el enemigo aun sigue vivo
-		if (vida!=null && vida.GetHealth()>0)
+		//Comprobamos que el enemigo tiene vida
+		if (vida!=null && vida.GetHealth()<=0)
 		{
+			makeDamage = false;
+		}
+
+		if(makeDamage)
+		{
+			//Aplicamos animacion de KnockBack en caso de ser el player
 			if (player.GetComponentInChildren<PlayerMovement>() != null)
 			{
 				anim = player.GetComponent<Animator>();
 				#region KnockBack
 				if (produceKnockBack)
 				{
-					///<summary>
 					///Nos interesa que el jugador sea empujado a la derecha o izquierda en funcion de la pos del enemigo.
-					///</summary>
 					knockback = player.GetComponentInChildren<Knockback>();
 
 					//Detectamos la posicion del jugador respecto al enemigo
@@ -49,10 +56,10 @@ public class Danyo : MonoBehaviour
 				}
 				#endregion
 			}
-
-			if (vida != null && vida.enabled)
+			//Reducimos su vida en cualquier caso
+			if (vidaPlayer != null && vidaPlayer.enabled)
 			{   //Hace daño al personaje en cuestión//
-				vida.QuitaVida(danyo);
+				vidaPlayer.QuitaVida(danyo);
 
 				//Comprobamos que sea el jugador y le aplicamos daño e invulnerabilidad//
 				playerInv = player.GetComponent<Invulnerable>();
@@ -60,5 +67,7 @@ public class Danyo : MonoBehaviour
 					playerInv.enabled = true;
 			}
 		}
+		
 	}
+
 }
