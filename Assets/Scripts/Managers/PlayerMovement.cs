@@ -50,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
 			jumpCounter = jumpTime;
 		}
 		//Si mantengo el salto, es que he dejado de tocar el suelo y empieza una cuenta regresiva.
-		//Mientras la cuenta no llegue a 0, seguirá subiendo.
+		//Mientras la cuenta no llegue a 0, seguirá subiendo
 		if (Input.GetButton("Jump") && isJumping)
 		{
 			if (jumpCounter > 0)
@@ -79,6 +79,7 @@ public class PlayerMovement : MonoBehaviour
 		horizontalMovement = runVelocity * Input.GetAxis("Horizontal");
 		anim.SetFloat("xMove", Mathf.Abs(horizontalMovement));
 		#endregion
+		Debug.Log(runVelocity);
 	}
 
 	private void FixedUpdate()
@@ -123,6 +124,11 @@ public class PlayerMovement : MonoBehaviour
 	public void ResetSpeed()
 	{
 		runVelocity = savedSpeed;
+	}
+	public void ReduceVelocidad()
+	{
+		Debug.Log("hola");
+		runVelocity--;
 	}
 	#endregion
 }
