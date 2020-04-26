@@ -5,8 +5,9 @@ public class Invulnerable : MonoBehaviour
     //Cuando el jugador recibe daño, se desavtica su componente de vida, por lo que no se le puede hacer daño//
     Vida player;
     Disparar disparo;
+
     double timer = 0;
-    public int TiempoInvulneravilidad;
+    public float TiempoInvulneravilidad;
     private void Awake()
     {
         player = GetComponent<Vida>();
@@ -21,10 +22,13 @@ public class Invulnerable : MonoBehaviour
     {
         player.enabled = false;
         disparo.enabled = false;
-    }
+
+	}
     private void OnDisable()
     {
         player.enabled = true;
         disparo.enabled = true;
+		//Al parecer la variable timer mantiene su valor incluso al desactivar y activar el componente
+		timer = 0; 
     }
 }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -7504385857118293159}
   - component: {fileID: -4086033367962387536}
   m_Layer: 15
-  m_Name: arma
+  m_Name: ArmaduraWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84,3 +84,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   danyo: 1
+  thrust: {x: 650, y: 650}
+  produceKnockBack: 1

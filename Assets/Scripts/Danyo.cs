@@ -8,16 +8,13 @@ public class Danyo : MonoBehaviour
 
 	Invulnerable playerInv;
 	Transform playerbody;
-	Animator anim;
+	
 	Knockback knockback;
 	Vida vida, vidaPlayer;
 
 	bool makeDamage = true;
 	Vector2 dirKnock;
-	private void Start()
-	{
-		//para que un Componente se puedea desactivar, tiene que llevar el metodo Start
-	}
+
 	private void OnCollisionEnter2D(Collision2D collision)
     {
 		GameObject player = collision.gameObject;
@@ -26,35 +23,24 @@ public class Danyo : MonoBehaviour
 		
 		//Comprobamos que el enemigo tiene vida
 		if (vida!=null && vida.GetHealth()<=0)
-		{
 			makeDamage = false;
-		}
 
 		if(makeDamage)
 		{
 			//Aplicamos animacion de KnockBack en caso de ser el player
-			if (player.GetComponentInChildren<PlayerMovement>() != null)
+			if (player.GetComponentInChildren<PlayerMovement>() != null && produceKnockBack)
 			{
-				anim = player.GetComponent<Animator>();
-				#region KnockBack
-				if (produceKnockBack)
-				{
-					///Nos interesa que el jugador sea empujado a la derecha o izquierda en funcion de la pos del enemigo.
-					knockback = player.GetComponentInChildren<Knockback>();
+				///Nos interesa que el jugador sea empujado a la derecha o izquierda en funcion de la pos del enemigo.
+				knockback = player.GetComponentInChildren<Knockback>();
 
-					//Detectamos la posicion del jugador respecto al enemigo
-					if (transform.position.x < collision.transform.position.x)
-						dirKnock = Vector2.right;
-					else dirKnock = Vector2.left;
+				//Detectamos la posicion del jugador respecto al enemigo
+				if (transform.position.x < collision.transform.position.x)
+					dirKnock = Vector2.right;
+				else dirKnock = Vector2.left;
 
-					//Aplicamos el KnocBack
-					if (knockback != null)
-						knockback.Impulso(dirKnock, thrust.x, thrust.y);
-
-					anim.SetTrigger("Knockback");
-
-				}
-				#endregion
+				//Aplicamos el KnockBack
+				if (knockback != null && knockback.enabled)
+					knockback.Impulso(dirKnock, thrust.x, thrust.y);
 			}
 			//Reducimos su vida en cualquier caso
 			if (vidaPlayer != null && vidaPlayer.enabled)
@@ -67,7 +53,5 @@ public class Danyo : MonoBehaviour
 					playerInv.enabled = true;
 			}
 		}
-		
 	}
-
 }

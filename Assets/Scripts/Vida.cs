@@ -27,7 +27,8 @@ public class Vida : MonoBehaviour
 
         if (gameObject.GetComponentInChildren<PlayerMovement>() != null)
         {
-            UIManager.instance.ReducirCorazon(danyo);
+			anim.SetTrigger("Damage");
+			UIManager.instance.ReducirCorazon(danyo);
         }
 		
 		if (salud <= 0)
