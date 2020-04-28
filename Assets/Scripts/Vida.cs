@@ -60,6 +60,7 @@ public class Vida : MonoBehaviour
 	public void OnDead()
 	{
 		GameManager.instance.Morir(gameObject);
+        //Debug.LogError("morir");
 	}
 
 	public void Infanticidio()

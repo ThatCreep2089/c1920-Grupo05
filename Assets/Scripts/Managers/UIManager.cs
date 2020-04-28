@@ -3,11 +3,31 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
+    //Panel de Game Over
+    public GameObject finishPanel;
+    public Text finishText;
+
     public static UIManager instance;
     public Image[] corazones;
 	public Image[] powerUps;
 
     int indice;
+    private void Start()
+    {
+        GameManager.instance.SetUIManager(this);
+    }
+
+    public void FinishGame(bool playerWins)
+    {
+        //Debug.LogError("finishGame Detectado");
+        if (playerWins)
+            finishText.text = "The End \n Gracias por jugar";
+        else
+            finishText.text = "Game Over";
+
+        finishPanel.gameObject.SetActive(true);
+    }
+
     private void Awake()
     {
         if (instance == null)

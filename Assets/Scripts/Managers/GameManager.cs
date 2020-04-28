@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    private UIManager uiManager;
     private void Awake()
     {
         //Cosa que viene en los apuntes para que el gamemanager no se destruya entre escenas
@@ -17,14 +18,30 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    //Metodo que destruye el gameobject del jugador
+    public void SetUIManager(UIManager uim)
+    {
+        uiManager = uim;
+    }
+
     public void Morir(GameObject personaje)
     {
-        if (personaje.GetComponent<PlayerMovement>()) ChangeScene("Main Menu");
+        if (personaje.GetComponentInChildren<PlayerMovement>())
+        {
+            //Debug.LogError("player detectado");
+            LevelFinished(false);
+        }
+
         Destroy(personaje);
     }
-    private void ChangeScene(string name)
+
+    public void ChangeScene(string name)
     {
         SceneManager.LoadScene(name);
+    }
+
+    public void LevelFinished(bool playerWins)
+    {
+        //Debug.LogError("levelfinished");
+        uiManager.FinishGame(playerWins);
     }
 }
