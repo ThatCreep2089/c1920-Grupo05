@@ -36,7 +36,6 @@ public class Dragon : MonoBehaviour
             {
                 rayo.SetActive (true); //APARECE EL RAYO
                 //rayo.SetActive??
-                Debug.Log("LO ACTIVO");
 
                 tRayoAuxiliar -= Time.deltaTime;
             }
@@ -54,7 +53,6 @@ public class Dragon : MonoBehaviour
 
                     rayo.SetActive (false); //DESTRUYE EL RAYO
 
-                    Debug.Log("LO DESACTIVO");
                 }
             }
         }
@@ -75,7 +73,7 @@ public class Dragon : MonoBehaviour
                 tRayoAuxiliar = tiempoRayo;
 
                 activo = true;
-                Debug.Log("TERMINO LA ESPERA");
+
                 tEsperaAuxiliar = tiempoEspera;
             }
         }

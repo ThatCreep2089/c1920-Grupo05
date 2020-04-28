@@ -38,14 +38,14 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: HUD
-    uniqueID: 133595357
-    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
   - name: Player
     uniqueID: 473249175
+    locked: 0
+  - name: HUD
+    uniqueID: 133595357
     locked: 0
   - name: Enemies
     uniqueID: 2445982893
