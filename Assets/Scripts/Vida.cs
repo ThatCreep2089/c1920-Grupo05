@@ -75,5 +75,21 @@ public class Vida : MonoBehaviour
     {
         disparoPlayer.enabled = false;
     }
+
+    //Suma vida (solo lo puede trigerear el jugador)
+    public void SumaVidaPlayer()
+    {
+        if (salud + 2 <= 6)
+        {
+            salud += 2;
+            UIManager.instance.AddCorazon(2);
+        }
+        else if (salud + 1 <= 6)
+        {
+            salud += 1;
+            UIManager.instance.AddCorazon(1);
+        }
+    }
+
     #endregion
 }

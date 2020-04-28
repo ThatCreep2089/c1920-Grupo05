@@ -17,4 +17,10 @@ public class ProjectileProperties : MonoBehaviour
         //Destruye el disparo tras tiempoProyectil. Básicamente el rango de disparo.
         Destroy(gameObject, tiempoProyectil);
     }
+
+    //aumenta el tiempo que tarda el proyectil en desaparecer
+    public void AumentaRango(float multiplicador)
+    {
+        tiempoProyectil *= multiplicador;
+    }
 }

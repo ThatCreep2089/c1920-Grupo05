@@ -128,5 +128,11 @@ public class PlayerMovement : MonoBehaviour
 	{
 		runVelocity--;
 	}
+	//aumenta la velocidad de movimiento
+	public void AumentaVelocidad(float multiplicador)
+	{
+		runVelocity *= multiplicador;
+		savedSpeed = runVelocity;
+	}
 	#endregion
 }

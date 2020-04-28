@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 345505083032205665}
   - component: {fileID: 7634108006406350987}
   - component: {fileID: -671430060497709675}
-  - component: {fileID: 563531002283875407}
+  - component: {fileID: -4989341996397864240}
   m_Layer: 16
   m_Name: Poder
   m_TagString: Untagged
@@ -109,7 +109,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6, y: 1.6}
   m_EdgeRadius: 0
---- !u!114 &563531002283875407
+--- !u!114 &-4989341996397864240
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,6 +118,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 2788337021620886358}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c954ae3ffcd9294da01918d42b859b0, type: 3}
+  m_Script: {fileID: 11500000, guid: efee8ee51b9e10a45a519751157fc12c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bala: {fileID: 2144757585097190251, guid: 8a0edad3b9a87734480b217abe02f04f, type: 3}
+  MultDanyoAumento: 2

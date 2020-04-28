@@ -54,4 +54,9 @@ public class Danyo : MonoBehaviour
 			}
 		}
 	}
+	//Metodo para aumentar el danyo segun un numero por el que se multiplica
+	public void AumentaDanyo(int multiplicador)
+	{
+		danyo *= multiplicador;
+	}
 }

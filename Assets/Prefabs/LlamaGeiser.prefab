@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5936695742651765757}
   - component: {fileID: 5936695742651765745}
   - component: {fileID: 8618244527305814873}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LlamaGeiser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
