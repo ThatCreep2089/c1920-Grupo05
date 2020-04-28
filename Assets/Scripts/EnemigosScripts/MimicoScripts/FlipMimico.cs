@@ -23,7 +23,10 @@ public class FlipMimico : MonoBehaviour
         {
             anim.SetBool("Turn", true);
             anim.SetBool("Walking", false);
-            moverse.enabled = false;
+
+			//ARREGLAR!!!!!!!!!!!
+			if(moverse!=null)
+				moverse.enabled = false;
         }
 
         else if (rb.velocity.x > 0 && trans.localScale.x < 0)
