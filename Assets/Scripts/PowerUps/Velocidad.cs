@@ -2,7 +2,7 @@
 
 public class Velocidad : MonoBehaviour
 {
-    public float MultVelocidadAumento;
+    [SerializeField] float MultVelocidadAumento;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //GetComponentInChildren porque el PlayerMovement esta en un objeto hijo y si no, no lo pilla

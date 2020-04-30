@@ -9,14 +9,14 @@ public class Piston : MonoBehaviour
     Transform transPiston; //VOLVERA A SU POSICION 
     Vector3 posInicial;
 
-    public float speed;
+    [SerializeField] float speed;
 
     private bool empujar;
 
-    public float tiempoDeEspera; //ESPERA ANTES DE COMENZAR A MOVERSE
+    [SerializeField] float tiempoDeEspera; //ESPERA ANTES DE COMENZAR A MOVERSE
     private float esperaAuxiliar;
 
-    public float tiempoDeEmpuje; //EMPUJA UN RATO
+    [SerializeField] float tiempoDeEmpuje; //EMPUJA UN RATO
     private float empujeAuxiliar;
 
     //INICIALIZA VARIABLES

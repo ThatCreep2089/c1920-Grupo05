@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Comida : MonoBehaviour
 {
-    public float TiempoSlow = 5f;
+    [SerializeField] float TiempoSlow = 5f;
     float contador = 0;
     bool destruir = false;
     GameObject player;

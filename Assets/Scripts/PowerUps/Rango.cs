@@ -2,8 +2,8 @@
 
 public class Rango : MonoBehaviour
 {
-    public GameObject bala;
-    public float MultRangoAumento;
+    [SerializeField] GameObject bala;
+    [SerializeField] float MultRangoAumento;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.GetComponentInChildren<PlayerMovement>() != null)

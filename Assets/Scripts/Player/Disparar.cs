@@ -2,12 +2,12 @@
 
 public class Disparar : MonoBehaviour
 {
-	public float velocidadProyectil;
+	[SerializeField] float velocidadProyectil;
 	//Proyectil
-	public GameObject proyectil;
+	[SerializeField] GameObject proyectil;
 
 	//Variables de tiempo entre disparos.
-	public float attackTime;			//Velocidad de ataque y límite de la cuenta progresiva.
+	[SerializeField] float attackTime;			//Velocidad de ataque y límite de la cuenta progresiva.
 	float attackCounter;				//Contador progresivo.
 	bool puedeDisparar = true;			//Si puedeDisparar = false, la cuenta progresiva aún no ha acabado.
 

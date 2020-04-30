@@ -4,8 +4,10 @@ public class Oscilate : MonoBehaviour
 {
 	//ESTE COMPONENTE DEBE IR ADJUNTO A UN GAMEOBJECT QUE HAGA DE EJE GIRADOR DEL GO QUE QUEREMOS QUE OSCILE.
 	#region Variables
+
+	//Tiempo que tarda en cambiar de posición.
 	[Range(1.7f, 2)]
-	public float time; //Tiempo que tarda en cambiar de posición.
+	[SerializeField] float time; 
 
 	float interpTime, temp;      //Tiempo entre cada interpolación | Temporizador .
 

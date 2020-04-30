@@ -3,13 +3,13 @@
 public class Tripas : MonoBehaviour {
 
 	#region Variables
-	public float atraction;
-	public float offSet;
-	public bool Horizontal; //Esto permite diferenciar si la trampa se encuentra posicionada en una pared o en el techo
+	[SerializeField] float atraction;
+	[SerializeField] float offSet;
+	[SerializeField] bool Horizontal; //Esto permite diferenciar si la trampa se encuentra posicionada en una pared o en el techo
 							//El objetivo es poder facilitar la detencion de la atraccion en el codigo.
 	[Header("Sprite")]
-	public float tripasStretch;
-	public float tripasContract;
+	[SerializeField] float tripasStretch;
+	[SerializeField] float tripasContract;
 
 	Rigidbody2D playerRb;
 	Transform player;

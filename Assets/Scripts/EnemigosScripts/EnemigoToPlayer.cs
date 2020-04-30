@@ -4,8 +4,8 @@ public class EnemigoToPlayer : MonoBehaviour
 {
     //Si te pones detrás deja de funcionar porque el vector pasa a ser negativo//
     //Posible solución, poner si dir.x es mayor o menos que rangoDeAtaque +1 aprox//
-    public Vector2 movimientoEnemigo;
-	public float rangoDeAtaque;
+    [SerializeField] Vector2 movimientoEnemigo;
+    [SerializeField] float rangoDeAtaque;
 
 	Rigidbody2D rb;
     Transform playert;

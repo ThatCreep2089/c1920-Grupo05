@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class QuitGame : MonoBehaviour {
 
-	public float contador = 3f;
+	[SerializeField] float contador = 3f;
 	bool quit = false;
 	#region Unity Methods
 

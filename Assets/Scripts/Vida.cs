@@ -10,7 +10,6 @@ public class Vida : MonoBehaviour
     DisparoEnemigo dispara;
 	EnemigoToPlayer moverse;
 
-    [SerializeField]
 	public int salud;
 
 	private void Start()

@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class DanyoTrigger : MonoBehaviour
 {
-	public int danyo;
+	[SerializeField] int danyo;
+
 	Invulnerable playerInv;
 	float contador = 0f;
-	public float DPT = 4f;
+
+	[SerializeField]
+	float DPT = 4f;
 
 	private void OnTriggerStay2D(Collider2D collision) //Usamos un OnTriggerStay para poder hacer un contador//
 	{

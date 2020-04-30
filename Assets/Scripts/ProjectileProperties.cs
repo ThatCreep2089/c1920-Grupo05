@@ -2,8 +2,8 @@
 
 public class ProjectileProperties : MonoBehaviour
 {
-	//Tiempo de vida del proyectil
-    public float tiempoProyectil;
+    //Tiempo de vida del proyectil
+    [SerializeField] float tiempoProyectil;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Destroy(gameObject);
