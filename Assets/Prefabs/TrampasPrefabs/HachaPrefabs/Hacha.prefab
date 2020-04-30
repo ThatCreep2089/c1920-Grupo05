@@ -192,6 +192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   danyo: 2
   thrust: {x: 350, y: 350}
+  produceKnockBack: 1
 --- !u!1 &8372343143425495857
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,7 +204,7 @@ GameObject:
   - component: {fileID: 8372343143425495856}
   - component: {fileID: 8372343143425495855}
   m_Layer: 14
-  m_Name: Eje
+  m_Name: Hacha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
