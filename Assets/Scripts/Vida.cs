@@ -2,22 +2,30 @@
 
 public class Vida : MonoBehaviour
 {
+    Rigidbody2D rbPlayer;
     Disparar disparoPlayer;
+    PlayerMovement movimientoPlayer;
+    Knockback knockback;
     Animator anim;
     DisparoEnemigo dispara;
 	EnemigoToPlayer moverse;
-	Knockback knockback;
 
+    [SerializeField]
 	public int salud;
-	Vector2 dirKnock;
 
 	private void Start()
     {
+        //componentes player
         disparoPlayer = GetComponent<Disparar>();
+        movimientoPlayer = GetComponentInChildren<PlayerMovement>();
+        knockback = GetComponentInChildren<Knockback>();
+        rbPlayer = GetComponent<Rigidbody2D>();
+
+        //componentes de enemigos
         dispara = GetComponentInChildren<DisparoEnemigo>();
         moverse = GetComponentInChildren<EnemigoToPlayer>();
-		knockback = GetComponentInChildren<Knockback>();
 
+        //animacion
 		anim = transform.GetComponent<Animator>();
     }
     
@@ -33,21 +41,14 @@ public class Vida : MonoBehaviour
 		
 		if (salud <= 0)
         {
-			if (knockback != null)         //El KnockBack Interrumpe la anim de muerte. Aun hay que hacer arreglos para que funcione mejor.
-				knockback.enabled = false;
-
             if(dispara != null)             //para que no se mueva ni dispare en los primeros frames de la animacion de muerte.
-            {
                 dispara.enabled = false;
-            }
+
             if (moverse != null)
-            {
                 moverse.enabled = false;
-            }
+
             if(anim != null)
-            {
 				anim.SetTrigger("Dead");
-            }
         }
     }
 
@@ -71,9 +72,12 @@ public class Vida : MonoBehaviour
 		}
 	}
 
-    public void NoShoot()
+    public void NoShootOrMove()
     {
+        rbPlayer.velocity = Vector2.zero;
+        knockback.enabled = false;
         disparoPlayer.enabled = false;
+        movimientoPlayer.enabled = false;
     }
 
     //Suma vida (solo lo puede trigerear el jugador)
