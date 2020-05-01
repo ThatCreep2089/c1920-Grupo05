@@ -6,7 +6,7 @@ public class GotaOro : MonoBehaviour
     bool reducir = false;
     const float tiempoReducir = 2;
     float contador = 0;
-    [SerializeField] int velocidadReducida;
+    [SerializeField] int velocidadReducida = 3;
     private void Update()
     {
         if (reducir)

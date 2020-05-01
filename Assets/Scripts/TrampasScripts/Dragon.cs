@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Dragon : MonoBehaviour
 {
-    [SerializeField] Transform dragon; //Hay que saber desde DONDE SALE LA BALA
-    [SerializeField] GameObject rayo;
+    public Transform dragon; //Hay que saber desde DONDE SALE LA BALA
+    public GameObject rayo;
 
-    [SerializeField] float tiempoRayo; //tiempo que dura la llamarada
+    [SerializeField] float tiempoRayo = 2; //tiempo que dura la llamarada
     private float tRayoAuxiliar;
 
-    [SerializeField] float tiempoEspera;
+    [SerializeField] float tiempoEspera = 2 ;
     private float tEsperaAuxiliar;
 
     private bool activo;

@@ -6,11 +6,10 @@ public class Arma : MonoBehaviour
 {
     public GameObject atkcol;
     private Animator anim;
-    public float tiempoPre = 1;
+    [SerializeField] float tiempoPre = 1;
     float contador;
     bool control = false;
     Transform arma;
-    public int numAnimacion;
 
     void Awake()
     {

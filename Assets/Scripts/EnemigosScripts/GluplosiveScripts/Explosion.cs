@@ -6,7 +6,7 @@ public class Explosion : MonoBehaviour
 {
     public GameObject explotido;
     GameObject explotaux;
-    public float radioExplosion;
+    [SerializeField] float radioExplosion = 1;
     Animator anim;
     private void Awake()
     {

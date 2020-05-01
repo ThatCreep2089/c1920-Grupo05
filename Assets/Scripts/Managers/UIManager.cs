@@ -4,8 +4,8 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     //Panel de Game Over
-    [SerializeField] GameObject finishPanel;
-    [SerializeField] Text finishText;
+    public GameObject finishPanel;
+    public Text finishText;
 
     public static UIManager instance;
     public Image[] corazones;

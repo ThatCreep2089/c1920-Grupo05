@@ -7,7 +7,7 @@ public class Invulnerable : MonoBehaviour
     Disparar disparo;
 
     double timer = 0;
-    [SerializeField] float TiempoInvulneravilidad;
+    [SerializeField] float TiempoInvulneravilidad = 1.5f ;
     private void Awake()
     {
         player = GetComponent<Vida>();

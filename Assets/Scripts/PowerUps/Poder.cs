@@ -2,8 +2,8 @@
 
 public class Poder : MonoBehaviour
 {
-    [SerializeField] GameObject bala;
-    [SerializeField] int MultDanyoAumento;
+    public GameObject bala;
+    [SerializeField] int MultDanyoAumento = 2;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.GetComponentInChildren<PlayerMovement>() != null)

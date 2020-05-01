@@ -7,7 +7,7 @@ public class Oscilate : MonoBehaviour
 
 	//Tiempo que tarda en cambiar de posición.
 	[Range(1.7f, 2)]
-	[SerializeField] float time; 
+	[SerializeField] float time = 1; 
 
 	float interpTime, temp;      //Tiempo entre cada interpolación | Temporizador .
 

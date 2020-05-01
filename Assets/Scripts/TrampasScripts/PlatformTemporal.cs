@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlatformTemporal : MonoBehaviour
 {
     //Tiempo de vida de la Plataforma tras el impacto
-    [SerializeField] float tiempo;
+    [SerializeField] float tiempo = 1;
 
     float tiempoAuxiliar;
         

@@ -5,8 +5,8 @@ using UnityEngine;
 public class Murcielago : MonoBehaviour {
 
 	#region Variables
-	public Vector2 movimientoEnemigo;
-	public Vector2 rangoDeAtaque;
+	[SerializeField] Vector2 movimientoEnemigo = Vector2.zero;
+	[SerializeField] Vector2 rangoDeAtaque = Vector2.zero;
 
 	Rigidbody2D rb;
 	Transform playert;

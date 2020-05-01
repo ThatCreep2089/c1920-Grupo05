@@ -5,8 +5,8 @@ using UnityEngine;
 public class DisparoEnemigo : MonoBehaviour
 {
     public GameObject bala, spawn;
-    public Vector2 veldisp;
-    public float segundos;
+    [SerializeField] Vector2 veldisp = Vector2.zero;
+    [SerializeField] float segundos = 1;
     float segundosAuxiliar;
     Transform player;
     Animator anim;

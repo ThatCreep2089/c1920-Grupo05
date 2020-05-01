@@ -2,9 +2,9 @@
 
 public class Stinky : MonoBehaviour
 {
-	[SerializeField] float distanceGas; //Distancia a la que debe estar el Jugador para que se active la nube
-	[SerializeField] float tiempoDanyo; //Tiempo que debe pasar entre cada daño.
-	[SerializeField] GameObject nubeGasPrefab;	//Nube que se va a instanciar.
+	[SerializeField] float distanceGas = 1; //Distancia a la que debe estar el Jugador para que se active la nube
+	[SerializeField] float tiempoDanyo = 1; //Tiempo que debe pasar entre cada daño.
+	public GameObject nubeGasPrefab;	//Nube que se va a instanciar.
 
 	CircleCollider2D gasCollider;
 	Transform player, stinky;
