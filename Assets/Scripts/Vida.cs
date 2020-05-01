@@ -10,7 +10,8 @@ public class Vida : MonoBehaviour
     DisparoEnemigo dispara;
 	EnemigoToPlayer moverse;
 
-	public int salud;
+	[SerializeField] int salud;
+	Vector2 dirKnock;
 
 	private void Start()
     {

@@ -11,20 +11,20 @@ public class ArmaduraDorada : MonoBehaviour
     {
         if(gameObject.GetComponent<Vida>() != null)
         {
-            vidaMax = gameObject.GetComponent<Vida>().salud;
+            vidaMax = gameObject.GetComponent<Vida>().GetHealth();
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (gameObject.GetComponent<Vida>().salud < vidaMax)
+        int salud = (gameObject.GetComponent<Vida>().GetHealth());
+        if (salud < vidaMax)
         {
             contador += Time.deltaTime;
         }
         if(contador >= tiempoRegen)
         {
-            gameObject.GetComponent<Vida>().salud = vidaMax; 
+            salud = vidaMax; 
             contador = 0;
         }
     }

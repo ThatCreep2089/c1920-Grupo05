@@ -22,12 +22,13 @@ public class Comida : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.GetComponent<Vida>() != null) //Comprueba que ha colisionado con el jugador
+        if(collision.gameObject.GetComponent<PlayerMovement>() != null) //Comprueba que ha colisionado con el jugador
         {
             player = collision.gameObject;
-            if(player.GetComponent<Vida>().salud + 1 <= 6) //Comprueba si la salud del jugador es la máxima o no
+            int playerlife = player.GetComponent<Vida>().GetHealth();
+            if (playerlife + 1 <= 6) //Comprueba si la salud del jugador es la máxima o no
             {
-                player.GetComponent<Vida>().salud++; //En caso de que la salud del jugador no sea la máxima le suma uno de vida
+                playerlife++; //En caso de que la salud del jugador no sea la máxima le suma uno de vida
                 UIManager.instance.AddCorazon(1);
             }
             else if(player.GetComponentInChildren<PlayerMovement>() != null)
