@@ -20,22 +20,25 @@ public class EnemigoToPlayer : MonoBehaviour
     //esté en el rango de visión del enemigo :) //
     private void Update()
     {
-        Vector2 dir = (playert.position - transform.parent.position).normalized;
-        rb.velocity = movimientoEnemigo * dir;                                  //Multiplicamos el vector de velocidad por el de la posición del player//
-        float distancia = playert.position.x - GetComponentInParent<Transform>().position.x;
-        if (Mathf.Abs(distancia) <= rangoDeAtaque)
-        {
-            Ataques ataque = GetComponentInParent<Ataques>();
-            if (ataque != null)
-            {
-                rb.velocity = Vector2.zero;
+		if (playert != null)
+		{
+			Vector2 dir = (playert.position - transform.parent.position).normalized;
+			rb.velocity = movimientoEnemigo * dir;                                  //Multiplicamos el vector de velocidad por el de la posición del player//
+			float distancia = playert.position.x - GetComponentInParent<Transform>().position.x;
+			if (Mathf.Abs(distancia) <= rangoDeAtaque)
+			{
+				Ataques ataque = GetComponentInParent<Ataques>();
+				if (ataque != null)
+				{
+					rb.velocity = Vector2.zero;
 
-				if(anim != null)
-					anim.SetBool("Walking", false);
+					if (anim != null)
+						anim.SetBool("Walking", false);
 
-                ataque.enabled = true;
-            }
-        }
+					ataque.enabled = true;
+				}
+			}
+		}
     }
     //Guardamos el transform del player para encontrar el vector director//
     private void OnTriggerEnter2D(Collider2D collision)
