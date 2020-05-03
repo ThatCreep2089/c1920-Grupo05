@@ -41,14 +41,14 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: TileMap_Details
+    uniqueID: 1555181023
+    locked: 0
   - name: Player
     uniqueID: 473249175
     locked: 0
   - name: Enemies
     uniqueID: 2445982893
-    locked: 0
-  - name: TileMap_Details
-    uniqueID: 1555181023
     locked: 0
   - name: TileMap_Collision
     uniqueID: 2436787583
