@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1113044322764366867}
   - component: {fileID: 8072037617956156488}
   - component: {fileID: 8091249411465850915}
+  - component: {fileID: 6342473825532121912}
   m_Layer: 10
   m_Name: Armadura
   m_TagString: Untagged
@@ -206,6 +207,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c2625616e7c3c84fac6f2c335caf587, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6342473825532121912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3186327881865196589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10c0a1f5d3f9125479d2778bd01adf03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  danyo: 1
+  thrust: {x: 350, y: 350}
+  produceKnockBack: 1
 --- !u!1 &3186327883083182528
 GameObject:
   m_ObjectHideFlags: 0
