@@ -7,9 +7,9 @@ public class VidaExtra : MonoBehaviour
         if (collision.gameObject.GetComponentInChildren<PlayerMovement>() != null)
         {
             //llama metodo de vida
-            collision.gameObject.GetComponent<Vida>().SumaVidaPlayer();
+            collision.gameObject.GetComponent<Vida>().AddVidaExtra();
             //metodo uimanager
-            UIManager.instance.AñadirPowerUp(gameObject);
+            UIManager.instance.AnyadirPowerUp(gameObject.name);
 
             Destroy(gameObject);
         }

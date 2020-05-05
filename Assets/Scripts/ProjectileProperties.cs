@@ -4,6 +4,7 @@ public class ProjectileProperties : MonoBehaviour
 {
     //Tiempo de vida del proyectil
     [SerializeField] float tiempoProyectil = 3;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Destroy(gameObject);
@@ -22,5 +23,12 @@ public class ProjectileProperties : MonoBehaviour
     public void AumentaRango(float multiplicador)
     {
         tiempoProyectil *= multiplicador;
+    }
+
+    // Aumenta el tamanyo de el proyectil
+    // OJO usa un multiplicador, asi que si quereis un aumento del 50% lo multiplicais por 1.5f
+    public void AumentaTamanyo(float multiplicador)
+    {
+        gameObject.transform.localScale *= multiplicador;
     }
 }

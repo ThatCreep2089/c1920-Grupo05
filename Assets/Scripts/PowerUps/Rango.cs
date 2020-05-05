@@ -11,7 +11,7 @@ public class Rango : MonoBehaviour
             //llama metodo de projectileproperties
             bala.GetComponent<ProjectileProperties>().AumentaRango(MultRangoAumento);
             //metodo uimanager
-            UIManager.instance.AñadirPowerUp(gameObject);
+            UIManager.instance.AnyadirPowerUp(gameObject.name);
             Destroy(gameObject);
         }
     }

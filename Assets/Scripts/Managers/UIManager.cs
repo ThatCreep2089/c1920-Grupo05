@@ -61,21 +61,40 @@ public class UIManager : MonoBehaviour
 
     public void AddCorazon(int vidaExtra)
     {
-        for(int i = 0; i < vidaExtra; i++)
+        for (int i = 0; i < vidaExtra; i++)
         {
             indice--;
             corazones[indice].gameObject.SetActive(true);
         }
     }
 
-	public void AñadirPowerUp(GameObject powerUp)
+    // Metodo que va activando los corazones en funcion del int dado 
+    // (esto funciona porque este metodo se llama siempre despues del ReducirCorazones)
+    public void SetHealth(int corazonesActivos)
+    {
+        for (int i = corazonesActivos; i < corazones.Length; i++)
+        {
+            corazones[i].gameObject.SetActive(true);
+        }
+        indice = corazonesActivos;
+    }
+
+	public void AnyadirPowerUp(string powerUp)
 	{
-		string s = powerUp.name;
-		s = s.Replace("(Clone)","");
+		string s = powerUp.Replace("(Clone)", "");
 
 		int i = 0;
 		while (i < powerUps.Length && powerUps[i].name != s) i++;
 		if (i < powerUps.Length)
 			powerUps[i].gameObject.SetActive(true);
 	}
+
+    public void QuitarPowerUp(string powerUp)
+    {
+        // ATENCION, como podeis ver este metodo no usa un string auxiliar para cortar la parte de (Clone) del nombre
+        // si usais este metodo por tanto, el string powerUp debe ser el nombre sin alterar
+        int i = 0;
+        while (i < powerUps.Length && powerUps[i].name != powerUp) i++;
+        if (i < powerUps.Length) powerUps[i].gameObject.SetActive(false);
+    }
 }
