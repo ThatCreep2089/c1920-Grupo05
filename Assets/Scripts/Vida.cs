@@ -9,6 +9,7 @@ public class Vida : MonoBehaviour
     Animator anim;
     DisparoEnemigo dispara;
 	EnemigoToPlayer moverse;
+    int vidasExtra;
 
 	[SerializeField] int salud;
 	Vector2 dirKnock;
@@ -20,13 +21,14 @@ public class Vida : MonoBehaviour
         movimientoPlayer = GetComponentInChildren<PlayerMovement>();
         knockback = GetComponentInChildren<Knockback>();
         rbPlayer = GetComponent<Rigidbody2D>();
+        vidasExtra = 0;
 
         //componentes de enemigos
         dispara = GetComponentInChildren<DisparoEnemigo>();
         moverse = GetComponentInChildren<EnemigoToPlayer>();
 
         //animacion
-		anim = transform.GetComponent<Animator>();
+        anim = transform.GetComponent<Animator>();
     }
     
     public void QuitaVida(int danyo)
@@ -39,7 +41,7 @@ public class Vida : MonoBehaviour
 			UIManager.instance.ReducirCorazon(danyo);
         }
 		
-		if (salud <= 0)
+		if (salud <= 0 && vidasExtra == 0)
         {
             if(dispara != null)             //para que no se mueva ni dispare en los primeros frames de la animacion de muerte.
                 dispara.enabled = false;
@@ -50,6 +52,14 @@ public class Vida : MonoBehaviour
             if(anim != null)
 				anim.SetTrigger("Dead");
         }
+        else if(salud <= 0 && vidasExtra > 0)
+        {
+            vidasExtra--;
+            salud = 3;
+            UIManager.instance.SetHealth(3);
+            if (vidasExtra == 0) UIManager.instance.QuitarPowerUp("VidaExtra");
+        }
+
     }
 
 	public int GetHealth()
@@ -80,19 +90,9 @@ public class Vida : MonoBehaviour
         movimientoPlayer.enabled = false;
     }
 
-    //Suma vida (solo lo puede trigerear el jugador)
-    public void SumaVidaPlayer()
+    public void AddVidaExtra()
     {
-        if (salud + 2 <= 6)
-        {
-            salud += 2;
-            UIManager.instance.AddCorazon(2);
-        }
-        else if (salud + 1 <= 6)
-        {
-            salud += 1;
-            UIManager.instance.AddCorazon(1);
-        }
+        vidasExtra++;
     }
 
     #endregion

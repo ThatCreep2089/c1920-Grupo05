@@ -11,7 +11,7 @@ public class Velocidad : MonoBehaviour
             //llama metodo del playermovement 
             collision.gameObject.GetComponentInChildren<PlayerMovement>().AumentaVelocidad(MultVelocidadAumento);
             //metodo uimanager
-            UIManager.instance.AñadirPowerUp(gameObject);
+            UIManager.instance.AnyadirPowerUp(gameObject.name);
             Destroy(gameObject);
         }
     }

@@ -10,8 +10,10 @@ public class Poder : MonoBehaviour
         {
             //metodo danyo
             bala.GetComponent<Danyo>().AumentaDanyo(MultDanyoAumento);
+            //aumento de tamanyo
+            bala.GetComponent<ProjectileProperties>().AumentaTamanyo(1.3f);
             //metodo uimanager
-            UIManager.instance.AñadirPowerUp(gameObject);
+            UIManager.instance.AnyadirPowerUp(gameObject.name);
             Destroy(gameObject);
         }
     }
