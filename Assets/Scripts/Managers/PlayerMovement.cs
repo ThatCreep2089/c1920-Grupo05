@@ -117,7 +117,7 @@ public class PlayerMovement : MonoBehaviour
 	#region AuxMethods
 	public void ReduceXSpeed()
 	{
-		runVelocity = slowedVelocity;
+		runVelocity = slowedVelocity;   
 	}
 
 	public void ResetSpeed()
@@ -126,13 +126,14 @@ public class PlayerMovement : MonoBehaviour
 	}
 	public void ReduceVelocidad()
 	{
-		runVelocity--;
-	}
+        runVelocity--;
+    }
 	//aumenta la velocidad de movimiento
 	public void AumentaVelocidad(float multiplicador)
 	{
 		runVelocity *= multiplicador;
 		savedSpeed = runVelocity;
 	}
+
 	#endregion
 }
