@@ -2,7 +2,7 @@
 
 public class Vida : MonoBehaviour
 {
-    Rigidbody2D rbPlayer;
+    Rigidbody2D rb;
     Disparar disparoPlayer;
     PlayerMovement movimientoPlayer;
     Knockback knockback;
@@ -20,7 +20,7 @@ public class Vida : MonoBehaviour
         disparoPlayer = GetComponent<Disparar>();
         movimientoPlayer = GetComponentInChildren<PlayerMovement>();
         knockback = GetComponentInChildren<Knockback>();
-        rbPlayer = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         vidasExtra = 0;
 
         //componentes de enemigos
@@ -51,6 +51,11 @@ public class Vida : MonoBehaviour
 
             if(anim != null)
 				anim.SetTrigger("Dead");
+
+			//Evitamos que pueda recibir algun ataque sin importar qué GO sea
+			GetComponent<BoxCollider2D>().enabled = false;
+			if (rb!=null)
+				rb.bodyType = RigidbodyType2D.Kinematic;
         }
         else if(salud <= 0 && vidasExtra > 0)
         {
@@ -71,7 +76,6 @@ public class Vida : MonoBehaviour
 	public void OnDead()
 	{
 		GameManager.instance.Morir(gameObject);
-        //Debug.LogError("morir");
 	}
 
 	public void Infanticidio()
@@ -84,7 +88,7 @@ public class Vida : MonoBehaviour
 
     public void NoShootOrMove()
     {
-        rbPlayer.velocity = Vector2.zero;
+        rb.velocity = Vector2.zero;
         knockback.enabled = false;
         disparoPlayer.enabled = false;
         movimientoPlayer.enabled = false;

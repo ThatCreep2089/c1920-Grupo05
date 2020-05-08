@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
 	float jumpCounter, slowedVelocity, savedSpeed;
 	float horizontalMovement;
-	bool isJumping = false, isInRest = true;
+	bool isJumping = false, isInRest = false;
 
 	#region Unity Methods
 
