@@ -95,10 +95,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5403504929201341211}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d333e302a804b947b0477f05229da7a, type: 3}
+  m_Script: {fileID: 11500000, guid: e50f30399ddb4ba4098c0041a29127ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceGas: 8
+  distanceGas: 1
   tiempoDanyo: 1
   nubeGasPrefab: {fileID: 5890067834038982808, guid: 014b6fa2b572e1c408f6dde5f4920c15,
     type: 3}
@@ -173,7 +173,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1848984403
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 433b896632344f141b3a3fbb95a3c533, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

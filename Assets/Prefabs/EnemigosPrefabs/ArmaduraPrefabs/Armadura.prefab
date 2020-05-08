@@ -97,7 +97,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1848984403
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 7633983853821675360, guid: f5b01cedce791a64db9d61d3f2b0f51a,
     type: 3}
@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   danyo: 1
-  thrust: {x: 350, y: 350}
+  thrust: {x: 650, y: 650}
   produceKnockBack: 1
 --- !u!1 &3186327883083182528
 GameObject:

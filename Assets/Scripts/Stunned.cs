@@ -6,21 +6,27 @@ public class Stunned : MonoBehaviour
     float stunCounter;
     bool stunned = false;
     PlayerMovement movimiento;
-
+	Disparar playerDisparo;
+	Rigidbody2D rbPlayer;
+	SpriteRenderer playerSprite;
     private void Awake()
     {
         movimiento = GetComponentInChildren<PlayerMovement>();
-    }
+		playerDisparo = GetComponentInChildren<Disparar>();
+		rbPlayer = GetComponent<Rigidbody2D>();
+		playerSprite = GetComponent<SpriteRenderer>();
+
+	}
     public void Paralizar()
     {
         if (movimiento != null)
         {
             movimiento.enabled = false;
-            gameObject.GetComponentInChildren<Disparar>().enabled = false;
-            gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+			playerDisparo.enabled = false;
+			rbPlayer.velocity = new Vector2(0, 0);
             stunned = true;
             stunCounter = 0;
-            gameObject.GetComponent<SpriteRenderer>().color = Color.yellow;
+			playerSprite.color = Color.yellow;
         }
     }
     private void Update()

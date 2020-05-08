@@ -1,12 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Arma : MonoBehaviour
 {
-    public GameObject atkcol;
-    private Animator anim;
-    [SerializeField] float tiempoPre = 1;
+	[SerializeField] GameObject atkcol = null;
+	[SerializeField] float tiempoPre = 1;
+
+	Animator anim;
     float contador;
     bool control = false;
     Transform arma;

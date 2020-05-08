@@ -4,7 +4,6 @@ public class PlayerMovement : MonoBehaviour
 {
 	//ESTE COMPONENTE ESTÁ ADJUNTO AL HIJO DEL GO QUE QUEREMOS QUE SALTE.
 	//COMO QUEREMOS QUE SALTE SOLO CUANDO TOQUE EL SUELO, EL BOX COLLIDER TRIGGER SOLO PUEDE COLISIONAR CON EL SUELO Y NO OTRO GO.
-	#region Variables
 	[Header("Jump Parameters")]
 	public float jumpForce;
 	//Tiempo durante el cual puedo saltar.
@@ -20,9 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
 	float jumpCounter, slowedVelocity, savedSpeed;
 	float horizontalMovement;
-	bool isJumping = false;
-	bool isInRest = true;
-	#endregion
+	bool isJumping = false, isInRest = true;
 
 	#region Unity Methods
 
@@ -77,19 +74,22 @@ public class PlayerMovement : MonoBehaviour
 		//Se detecta el input en cada frame y se ejecuta la animacion del jugador.
 		#region Horizontal
 		horizontalMovement = runVelocity * Input.GetAxis("Horizontal");
+		//Animacion de movimiento
 		anim.SetFloat("xMove", Mathf.Abs(horizontalMovement));
+
+		//Cambio de sentido del Sprite del jugador
+		if (Input.GetAxis("Horizontal") > 0) parent.localScale = new Vector3(1, 1, 1);
+		if (Input.GetAxis("Horizontal") < 0) parent.localScale = new Vector3(-1, 1, 1);
+
 		#endregion
 	}
 
 	private void FixedUpdate()
 	{
 		//Se aplica el input a la velocidad en cada paso físico.
-		#region Horizontal
-		rbParent.velocity = new Vector2(horizontalMovement, rbParent.velocity.y);
-
-		if (rbParent.velocity.x > 0) parent.localScale = new Vector3(1, 1, 1);
-		if (rbParent.velocity.x < 0) parent.localScale = new Vector3(-1, 1, 1);
-		#endregion
+		//verifico si se aplica si el cuerpo es dinamico, por motivos de comportamiento de las tripas.
+		if(rbParent.bodyType == RigidbodyType2D.Dynamic)
+			rbParent.velocity = new Vector2(horizontalMovement, rbParent.velocity.y);
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision)

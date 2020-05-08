@@ -10,18 +10,16 @@ public class Tripas : MonoBehaviour {
 	[Header("Sprite")]
 	[SerializeField] float tripasStretch = 0.6f;
 	
-	// la variable no se usa
-	//[SerializeField] float tripasContract = 0.019f;
 
 	Rigidbody2D playerRb;
 	Transform player;
+	PlayerMovement playerMove;
 
 	SpriteRenderer tripasSprite;
 	Vector2  iniTripas, finalPos;
 	Vector3 origin, dir;
 	
-	bool NoAttract = false;
-	bool tripas = true;
+	bool NoAttract = false, tripas = true;
 	#endregion
 
 	#region Unity Methods
@@ -44,7 +42,7 @@ public class Tripas : MonoBehaviour {
 		}
 		
 		if (playerRb != null && player != null && !tripas)
-		{	
+		{
 			//Determina si la trampa es horizontal o vertical
 			if(Horizontal)
 			{
@@ -59,6 +57,8 @@ public class Tripas : MonoBehaviour {
 					StopAttract(player.position.x <= origin.x + offSet);
 				else
 					StopAttract(player.position.x >= origin.x - offSet);
+
+
 			}
 			else
 			{
@@ -86,8 +86,9 @@ public class Tripas : MonoBehaviour {
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
+		playerMove = collision.GetComponentInChildren<PlayerMovement>();
 		//Cacheo el jugador, y cambio su tipo de cuerpo a cinematico para poder cambiar su posición.
-		if(collision.GetComponentInChildren<PlayerMovement>()!= null)
+		if (playerMove!= null)
 		{
 			playerRb = collision.GetComponent<Rigidbody2D>();
 			playerRb.bodyType = RigidbodyType2D.Kinematic;
@@ -100,7 +101,9 @@ public class Tripas : MonoBehaviour {
 	private void OnDisable()
 	{
 		if (playerRb != null)
+		{
 			playerRb.bodyType = RigidbodyType2D.Dynamic;
+		}
 	}
 	#endregion
 }

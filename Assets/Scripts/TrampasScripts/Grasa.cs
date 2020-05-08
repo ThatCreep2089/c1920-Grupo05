@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Grasa : MonoBehaviour
 {
@@ -15,6 +13,7 @@ public class Grasa : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        player.ResetSpeed();
+		if (player != null)
+			player.ResetSpeed();
     }
 }

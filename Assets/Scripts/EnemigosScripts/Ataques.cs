@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Ataques : MonoBehaviour
 {  //Cacheamos el enemigo para saber cual es, y según el que sea ejecutamos una cosa u otra//  
