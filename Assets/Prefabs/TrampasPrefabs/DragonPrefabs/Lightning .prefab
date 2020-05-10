@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 1459715085332243776}
   - component: {fileID: 1459715085332243783}
   - component: {fileID: 1459715085332243782}
-  - component: {fileID: 1459715085332243781}
   - component: {fileID: 1459715085332243780}
+  - component: {fileID: 7971687122498635686}
   m_Layer: 14
   m_Name: 'Lightning '
   m_TagString: Untagged
@@ -70,7 +70,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1848984403
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 6873929031785220420, guid: 6dbd6da350525e043af4c18e519da759,
     type: 3}
@@ -110,21 +110,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10.24, y: 2.06}
   m_EdgeRadius: 0
---- !u!114 &1459715085332243781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459715085332243803}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10c0a1f5d3f9125479d2778bd01adf03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  danyo: 2
-  thrust: {x: 350, y: 350}
-  produceKnockBack: 1
 --- !u!95 &1459715085332243780
 Animator:
   serializedVersion: 3
@@ -144,3 +129,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7971687122498635686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459715085332243803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3cd383ddaa62a946ba20e85b04aaf15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  danyo: 1
+  DPT: 4
