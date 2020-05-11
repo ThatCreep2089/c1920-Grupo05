@@ -14,7 +14,7 @@ public class TerminaTransition : MonoBehaviour
             {
                 GameManager.instance.ChangeScene("TileMap_Avaricia");
             }
-            else if (GameManager.instance.returncurrentLevel() == 2)
+            else if (GameManager.instance.returncurrentLevel() == 1)
             {
                 GameManager.instance.ChangeScene("TileMap_Gula");
             }
