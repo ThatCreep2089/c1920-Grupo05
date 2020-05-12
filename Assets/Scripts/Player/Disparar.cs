@@ -16,6 +16,10 @@ public class Disparar : MonoBehaviour
 
 	Animator anim;
 
+	// booleano que se pone a true cuando se recoge el power up de poder
+	// por como funcionan los scripts, si, hay que hacerlo aqui y no en otro sitio
+	bool dobleDanyo = false;
+
 	private void Awake()
 	{
 		bulletSpawner = gameObject.transform.GetChild(0);
@@ -71,13 +75,23 @@ public class Disparar : MonoBehaviour
 			//Si alguien tiene discrepancias, comentarlas(Autor: Joseda)
 			GameObject disparo = Instantiate(proyectil, bulletSpawner.position, bulletSpawner.rotation);
 
+			if (dobleDanyo)
+			{
+				disparo.GetComponent<Danyo>().AumentaDanyo(2);
+				disparo.GetComponent<ProjectileProperties>().AumentaTamanyo(1.3f);
+			}
 			disparo.GetComponent<Rigidbody2D>().velocity = new Vector2(0, velocidadProyectil);
 		}
 		//Disparo hacia abajo.
 		else if (Input.GetAxis("Vertical") < 0)
 		{
 			GameObject disparo = Instantiate(proyectil, bulletSpawner.position, bulletSpawner.rotation);
-			
+
+			if (dobleDanyo)
+			{
+				disparo.GetComponent<Danyo>().AumentaDanyo(2);
+				disparo.GetComponent<ProjectileProperties>().AumentaTamanyo(1.3f);
+			}
 			disparo.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -velocidadProyectil);
 		}
 		//Si no hay input vertical, dispara acorde a la escala del transform del jugador.
@@ -89,15 +103,30 @@ public class Disparar : MonoBehaviour
 		else if (danteTransform.localScale.x >= 0)
 		{
 			GameObject disparo = Instantiate(proyectil, bulletSpawner.position, bulletSpawner.rotation);
-			
+
+			if (dobleDanyo)
+			{
+				disparo.GetComponent<Danyo>().AumentaDanyo(2);
+				disparo.GetComponent<ProjectileProperties>().AumentaTamanyo(1.3f);
+			}
 			disparo.GetComponent<Rigidbody2D>().velocity = new Vector2(velocidadProyectil, 0);
 		}
 		//En caso contrario, dispara hacia la izquierda.
 		else
 		{
 			GameObject disparo = Instantiate(proyectil, bulletSpawner.position, bulletSpawner.rotation);
-			
+
+			if (dobleDanyo)
+			{
+				disparo.GetComponent<Danyo>().AumentaDanyo(2);
+				disparo.GetComponent<ProjectileProperties>().AumentaTamanyo(1.3f);
+			}
 			disparo.GetComponent<Rigidbody2D>().velocity = new Vector2(-velocidadProyectil, 0);
 		}
+	}
+
+	public void SetDobleDanyoTrue()
+	{
+		dobleDanyo = true;
 	}
 }
