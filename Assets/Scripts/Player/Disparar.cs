@@ -19,6 +19,7 @@ public class Disparar : MonoBehaviour
 	// booleano que se pone a true cuando se recoge el power up de poder
 	// por como funcionan los scripts, si, hay que hacerlo aqui y no en otro sitio
 	bool dobleDanyo = false;
+	bool rangoAum = false;
 
 	private void Awake()
 	{
@@ -80,6 +81,10 @@ public class Disparar : MonoBehaviour
 				disparo.GetComponent<Danyo>().AumentaDanyo(2);
 				disparo.GetComponent<ProjectileProperties>().AumentaTamanyo(1.3f);
 			}
+			if (rangoAum)
+			{
+				disparo.GetComponent<ProjectileProperties>().AumentaRango(2);
+			}
 			disparo.GetComponent<Rigidbody2D>().velocity = new Vector2(0, velocidadProyectil);
 		}
 		//Disparo hacia abajo.
@@ -91,6 +96,10 @@ public class Disparar : MonoBehaviour
 			{
 				disparo.GetComponent<Danyo>().AumentaDanyo(2);
 				disparo.GetComponent<ProjectileProperties>().AumentaTamanyo(1.3f);
+			}
+			if (rangoAum)
+			{
+				disparo.GetComponent<ProjectileProperties>().AumentaRango(2);
 			}
 			disparo.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -velocidadProyectil);
 		}
@@ -109,6 +118,10 @@ public class Disparar : MonoBehaviour
 				disparo.GetComponent<Danyo>().AumentaDanyo(2);
 				disparo.GetComponent<ProjectileProperties>().AumentaTamanyo(1.3f);
 			}
+			if (rangoAum)
+			{
+				disparo.GetComponent<ProjectileProperties>().AumentaRango(2);
+			}
 			disparo.GetComponent<Rigidbody2D>().velocity = new Vector2(velocidadProyectil, 0);
 		}
 		//En caso contrario, dispara hacia la izquierda.
@@ -121,6 +134,10 @@ public class Disparar : MonoBehaviour
 				disparo.GetComponent<Danyo>().AumentaDanyo(2);
 				disparo.GetComponent<ProjectileProperties>().AumentaTamanyo(1.3f);
 			}
+			if (rangoAum)
+			{
+				disparo.GetComponent<ProjectileProperties>().AumentaRango(2);
+			}
 			disparo.GetComponent<Rigidbody2D>().velocity = new Vector2(-velocidadProyectil, 0);
 		}
 	}
@@ -128,5 +145,9 @@ public class Disparar : MonoBehaviour
 	public void SetDobleDanyoTrue()
 	{
 		dobleDanyo = true;
+	}
+	public void SetRangoAumTrue()
+	{
+		rangoAum = true;
 	}
 }

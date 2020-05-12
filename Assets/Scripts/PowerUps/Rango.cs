@@ -9,7 +9,7 @@ public class Rango : MonoBehaviour
         if(collision.gameObject.GetComponentInChildren<PlayerMovement>() != null)
         {
             //llama metodo de projectileproperties
-            bala.GetComponent<ProjectileProperties>().AumentaRango(MultRangoAumento);
+            collision.gameObject.GetComponent<Disparar>().SetRangoAumTrue();
             //metodo uimanager
             UIManager.instance.AnyadirPowerUp(gameObject.name);
             Destroy(gameObject);

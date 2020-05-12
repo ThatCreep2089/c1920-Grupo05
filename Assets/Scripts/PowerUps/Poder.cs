@@ -8,10 +8,8 @@ public class Poder : MonoBehaviour
     {
         if(collision.gameObject.GetComponentInChildren<PlayerMovement>() != null)
         {
-            //metodo danyo
+            //metodo danyo, aqui tambien se aumenta el tamanyo
             collision.gameObject.GetComponent<Disparar>().SetDobleDanyoTrue();
-            //aumento de tamanyo
-            // bala.GetComponent<ProjectileProperties>().AumentaTamanyo(1.3f);
             //metodo uimanager
             UIManager.instance.AnyadirPowerUp(gameObject.name);
             Destroy(gameObject);
