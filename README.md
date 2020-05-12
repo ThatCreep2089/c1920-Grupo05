@@ -1,2 +1,2 @@
-Proyecto del grupo 5 de 1º de videojuegos en la Universida Complutense de Madrid, Compuesto por Ángel López, Ivan Prado, Oscar Maya, Jose Daniel Rave, Javier Maitín y Adriá Carreras. Dirigido y administrado por el grandisimo Guillermo Jiménez Díaz, gran profesor, mejor persona.
-El juego está basado en la divina comedia de dante y deberemos atravesar siete niveles en busca de nuestra amada, estos niveles serán temáticos de los pecados capitales.
+Proyecto del grupo 5 de 1º de videojuegos en la Universidad Complutense de Madrid, Compuesto por Ángel López, Iván Prado, Óscar Maya, Jose Daniel Rave, Javier Meitín y Adrià Carreras. Dirigido y administrado por el grandísimo Guillermo Jiménez Díaz, gran profesor, mejor persona.
+El juego está basado en la Divina Comedia de Dante y deberemos atravesar siete niveles en busca de nuestra amada, estos niveles serán temáticos de los pecados capitales.
