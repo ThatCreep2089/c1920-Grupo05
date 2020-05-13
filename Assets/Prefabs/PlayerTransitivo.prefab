@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3348279149137609447}
   - component: {fileID: 3348279149137609444}
   - component: {fileID: 3348279149137609441}
-  - component: {fileID: 3348279149137609443}
+  - component: {fileID: 7455900602012677336}
   m_Layer: 8
   m_Name: PlayerTransitivo
   m_TagString: Player
@@ -131,7 +131,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &3348279149137609443
+--- !u!95 &7455900602012677336
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -141,7 +141,7 @@ Animator:
   m_GameObject: {fileID: 3348279149137609450}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 11b695a37a3651a44be05cbae6997e8c, type: 2}
+  m_Controller: {fileID: 9100000, guid: 36bbd72c2521e5b40b9f8d879f7fad17, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
