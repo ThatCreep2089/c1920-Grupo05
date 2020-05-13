@@ -231,7 +231,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1848984403
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -766555713475555581, guid: 76371402161080c40840881924f6cf08,
     type: 3}
@@ -335,7 +335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f5cb3a5238ae2449585823cb8b0211, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  salud: 1
+  salud: 2
 --- !u!114 &4276917779076458965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,6 +350,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   danyo: 1
   thrust: {x: 350, y: 350}
+  produceKnockBack: 1
 --- !u!1 &7056374083273877291
 GameObject:
   m_ObjectHideFlags: 0

@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10c0a1f5d3f9125479d2778bd01adf03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  danyo: 2
+  danyo: 1
   thrust: {x: 0, y: 0}
   produceKnockBack: 1
 --- !u!114 &389511742058562630
