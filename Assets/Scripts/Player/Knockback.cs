@@ -9,12 +9,14 @@ public class Knockback : MonoBehaviour
 	float timer;
 	Rigidbody2D rb;
 	PlayerMovement PlayerMove;
+	Disparar disparoPlayer;
 
 	#region Unity Methods
 
 	private void Awake()
     {
 		rb = GetComponentInParent<Rigidbody2D>();
+		disparoPlayer = GetComponentInParent<Disparar>();
 		PlayerMove = GetComponent<PlayerMovement>();
 	}
 
@@ -25,6 +27,7 @@ public class Knockback : MonoBehaviour
 		{
 			directionX = new Vector2(dir.x,0);
 			PlayerMove.enabled = false;
+			disparoPlayer.enabled = false;
 		
 			rb.velocity = Vector2.zero; //Desactivo la velocidad para evitar que la que lleva, se sume a la del impulso.
 
@@ -49,6 +52,7 @@ public class Knockback : MonoBehaviour
 				//Si realiza algun input despues del tiempo limite
 				//Se anula el impulso y eljugador se puede mover.
 				PlayerMove.enabled = true;
+				disparoPlayer.enabled = true;
 				knockbackActived = false;
 
 				//reiniciamos contador
@@ -63,6 +67,7 @@ public class Knockback : MonoBehaviour
 		if (knockbackActived && PlayerMove != null && !PlayerMove.enabled)
 		{
 			PlayerMove.enabled = true;
+			disparoPlayer.enabled = true;
 			knockbackActived = false; //test sirve para que active el playerMove solo cuando ha habido Knoback
 		}
 	}

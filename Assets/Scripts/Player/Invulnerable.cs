@@ -6,7 +6,6 @@ public class Invulnerable : MonoBehaviour
 	[SerializeField] float TiempoInvulneravilidad = 1.5f;
 
 	Vida vidaPlayer;
-    Disparar disparoPlayer;
 	BoxCollider2D playerDamageCollider;
 
     double timer = 0;
@@ -14,7 +13,6 @@ public class Invulnerable : MonoBehaviour
     private void Awake()
     {
         vidaPlayer = GetComponent<Vida>();
-        disparoPlayer = GetComponent<Disparar>();
 		playerDamageCollider = gameObject.GetComponent<BoxCollider2D>();
 
 	}
@@ -26,7 +24,6 @@ public class Invulnerable : MonoBehaviour
     private void OnEnable()
     {
         vidaPlayer.enabled = false;
-        disparoPlayer.enabled = false;
 
 		//Desactivamos el collider que colisiona con los ataques de los enemigos.
 		playerDamageCollider.enabled = false;
@@ -35,7 +32,6 @@ public class Invulnerable : MonoBehaviour
     private void OnDisable()
     {
         vidaPlayer.enabled = true;
-        disparoPlayer.enabled = true;
 		//Reactivamos el collider que colisiona con los ataques de los enemigos.
 		playerDamageCollider.enabled = true;
 		//Al parecer la variable timer mantiene su valor incluso al desactivar y activar el componente. Lo reiniciamos.	

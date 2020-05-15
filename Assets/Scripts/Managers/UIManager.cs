@@ -3,32 +3,29 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    //Panel de Game Over
-    public GameObject finishPanel;
-    public Text finishText;
+	public static UIManager instance;
 
-    public static UIManager instance;
-    public Image[] corazones;
+	[Header("Panel de Game Over")]
+	public GameObject finishPanel;
+    public Text finishText;
+	
+	[Header("Panel de Pausa")]
+	public GameObject pausePanel;
+	public static bool paused = false;
+
+	[Header("Vida")]
+	public Image[] corazones;
+	[Header("Potencidores")]
 	public Image[] powerUps;
 
     int indice;
-    private void Start()
+
+    void Start()
     {
         GameManager.instance.SetUIManager(this);
     }
 
-    public void FinishGame(bool playerWins)
-    {
-        //Debug.LogError("finishGame Detectado");
-        if (playerWins)
-            finishText.text = "The End \n Gracias por jugar";
-        else
-            finishText.text = "Game Over";
-
-        finishPanel.gameObject.SetActive(true);
-    }
-
-    private void Awake()
+    void Awake()
     {
         if (instance == null)
         {
@@ -38,7 +35,52 @@ public class UIManager : MonoBehaviour
         indice = 0;
     }
 
-    public void ReducirCorazon(int danyo)
+	void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.Escape) /*|| Input.GetAxis("")*/)
+		{
+			if(paused)
+			{
+				ResumeGame();
+			}else
+			{
+				PauseGame();
+			}
+		}
+		
+	}
+
+	public void ResumeGame()
+	{
+		paused = false;
+		pausePanel.SetActive(false);
+		Time.timeScale = 1f; //Activamos la ejecuccion del juego.
+	}
+
+	public void PauseGame()
+	{
+		paused = true;
+		pausePanel.SetActive(true);
+		Time.timeScale = 0f; //Detenemos la ejecuccion del juego.
+	}
+
+	public void FinishGame(bool playerWins)
+	{
+		//Debug.LogError("finishGame Detectado");
+		if (playerWins)
+			finishText.text = "The End \n Gracias por jugar";
+		else
+			finishText.text = "Game Over";
+
+		finishPanel.gameObject.SetActive(true);
+	}
+
+	public void QuitGame()
+	{
+		Debug.Log("Quit!");
+		Application.Quit();
+	}
+	public void ReducirCorazon(int danyo)
     {
         int control = indice;
         if (indice + danyo < corazones.Length)

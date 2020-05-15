@@ -5,6 +5,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     private UIManager uiManager;
     int currentLevel = 1;
+
     private void Awake()
     {
         //Cosa que viene en los apuntes para que el gamemanager no se destruya entre escenas
@@ -38,7 +39,8 @@ public class GameManager : MonoBehaviour
     public void ChangeScene(string name)
     {
         SceneManager.LoadScene(name);
-        if (name != "Transition") currentLevel++;
+		if (name != "Transition") currentLevel++;
+		Time.timeScale = 1f; //Restaurar la ejecucion en caso de que esté pausado el juego.
     }
 
     public void LevelFinished(bool playerWins)
