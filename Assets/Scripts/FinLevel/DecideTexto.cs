@@ -1,26 +1,25 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+
 
 public class DecideTexto : MonoBehaviour
 {
-    TextMesh texto;
-    private void Start()
+	TMPro.TextMeshProUGUI texto;
+	private void Start()
     {
-        texto = GetComponent<TextMesh>();
-        int nivel = GameManager.instance.returncurrentLevel();
-        if (nivel == 0)
-        {
-            string[] quotes = quotesAvaricia();
-            texto.text = quotes[Random.Range(0, quotes.Length)];
-            Debug.Log("Hola hola");
-        }
-        else if(nivel == 1)
-        {
-            string[] quotes = quotesGula();
-            texto.text = quotes[Random.Range(0, quotes.Length)];
-        }
-    }
+        texto = GetComponent<TMPro.TextMeshProUGUI>();
+
+		int nivel = GameManager.instance.returncurrentLevel();
+		if (nivel == 0)
+		{
+			string[] quotes = quotesAvaricia();
+			texto.text = quotes[Random.Range(0, quotes.Length)];
+		}
+		else if (nivel == 1)
+		{
+			string[] quotes = quotesGula();
+			texto.text = quotes[Random.Range(0, quotes.Length)];
+		}
+	}
     private string [] quotesAvaricia()
     {
         string[] quotes =
@@ -43,7 +42,7 @@ public class DecideTexto : MonoBehaviour
     {
         string[] quotes =
         {
-            "cuyo fin es perdición, cuyo dios es su apetito y cuya gloria está en su vergüenza,"+"\n"+" los cuales piensan sólo en las cosas terrenales"+"\n"+
+            "Cuyo fin es perdición, cuyo dios es su apetito y cuya gloria está en su vergüenza,"+"\n"+" los cuales piensan sólo en las cosas terrenales"+"\n"+
             "Filipenses 3:19",
             "Porque del deseo de su corazón se jacta el impío,"+"\n"+" y el codicioso maldice y desprecia al SEÑOR"+"\n"+
             "Salmos 10:3",
