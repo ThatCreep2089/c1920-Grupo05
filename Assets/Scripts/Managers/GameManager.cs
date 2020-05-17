@@ -4,7 +4,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     private UIManager uiManager;
-    int currentLevel = 1;
+    int currentLevel = 0;
 
     private void Awake()
     {
@@ -48,5 +48,8 @@ public class GameManager : MonoBehaviour
         //Debug.LogError("levelfinished");
         uiManager.FinishGame(playerWins);
     }
-    public int returncurrentLevel() => currentLevel;
+    public int returncurrentLevel()
+    {
+        return currentLevel;
+    }
 }

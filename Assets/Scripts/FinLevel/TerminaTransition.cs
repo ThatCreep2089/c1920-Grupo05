@@ -18,6 +18,10 @@ public class TerminaTransition : MonoBehaviour
             {
                 GameManager.instance.ChangeScene("TileMap_Gula");
             }
+            else if (GameManager.instance.returncurrentLevel() == 2)
+            {
+                GameManager.instance.ChangeScene("Boss");
+            }
         }
     }
 }
