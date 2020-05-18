@@ -7,7 +7,8 @@ public class MainMenuController : MonoBehaviour
 	GameObject play, settings, quit;
 	Animator anim;
 	float timer;
-	bool bookOpened = false;
+
+	bool bookOpened, bookAvailable;
 
 	private void Awake()
 	{
@@ -19,13 +20,21 @@ public class MainMenuController : MonoBehaviour
 		settings = transform.GetChild(4).gameObject;
 		quit = transform.GetChild(5).gameObject;
 	}
-	
+
+	private void Start()
+	{
+		bookOpened = false;
+		bookAvailable = true;
+	}
+
 	private void Update()
 	{
-		if(Input.anyKeyDown)
+		if(Input.anyKeyDown && bookAvailable)
 		{
 			anim.SetTrigger("OpenBook");
 			bookOpened = true;
+			//Controlador para que no se vuelva a iniciar la animacion.
+			bookAvailable = false;
 		}
 
 		if(bookOpened)
