@@ -5,6 +5,7 @@ public class Stunned : MonoBehaviour
     float stunTime = 0.5f;
     float stunCounter;
     bool stunned = false;
+    Animator anim;
     PlayerMovement movimiento;
 	Disparar playerDisparo;
 	Rigidbody2D rbPlayer;
@@ -26,11 +27,11 @@ public class Stunned : MonoBehaviour
 			rbPlayer.velocity = new Vector2(0, 0);
             stunned = true;
             stunCounter = 0;
-			playerSprite.color = Color.yellow;
         }
     }
     private void Update()
     {
+        Debug.Log(playerSprite.color);
         if(stunned)
         {
             stunCounter += Time.deltaTime;

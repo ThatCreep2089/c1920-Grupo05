@@ -85,6 +85,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   danyo: 1
+  thrust: {x: 350, y: 350}
+  produceKnockBack: 0
 --- !u!114 &-4478869664677620975
 MonoBehaviour:
   m_ObjectHideFlags: 0
