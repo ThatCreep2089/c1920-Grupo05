@@ -1,7 +1,13 @@
 fileFormatVersion: 2
 guid: 1c29f307147b41f41a0a16baac203e3d
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2578929283055297648
+    second: Mimic_Idle_0
+  - first:
+      213: 3627086405382586728
+    second: Mimic_Idle_1
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -45,7 +51,7 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 50
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -96,7 +102,49 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Mimic_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 200
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d77770f75bf2e0e45ac8e12bf1cdbf2c
+      internalID: -2578929283055297648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mimic_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 32
+        width: 200
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47907d69fa48dfd4ea4cdcd23e8b7a4b
+      internalID: 3627086405382586728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
