@@ -4,79 +4,33 @@ using UnityEngine;
 
 public class Dragon : MonoBehaviour
 {
-    public Transform dragon; //Hay que saber desde DONDE SALE LA BALA
-    public GameObject rayo;
-
-    [SerializeField] float tiempoRayo = 2; //tiempo que dura la llamarada
-    private float tRayoAuxiliar;
-
-    [SerializeField] float tiempoEspera = 2 ;
-    private float tEsperaAuxiliar;
-
-    private bool activo;
+    BoxCollider2D colliderRayo;
+    SpriteRenderer seVeElRayo;
 
     void Awake()
     {
-        tRayoAuxiliar = tiempoRayo;
-
-        tEsperaAuxiliar = tiempoEspera;
-
-        activo = false;
+        colliderRayo = GetComponent<BoxCollider2D>();
+        seVeElRayo = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ActivarCollider()
     {
-        //if (Input.GetKeyDown(KeyCode.Q)) rayo = true;
+        colliderRayo.enabled = true;
+    }
 
-        //TOCA DISPARAR
-        if (activo)
-        {
-            if (tRayoAuxiliar == tiempoRayo)
-            {
-                rayo.SetActive (true); //APARECE EL RAYO
-                //rayo.SetActive??
+    public void DesactivarCollider()
+    {
+        colliderRayo.enabled = false;
+    }
 
-                tRayoAuxiliar -= Time.deltaTime;
-            }
+    public void VerRayo()
+    {
+        seVeElRayo.enabled = true;
+    }
 
-            else
-            {
-                if (tRayoAuxiliar > 0) //ESPERA UNOS SEGUNDOS
-                {
-                    tRayoAuxiliar -= Time.deltaTime;
-                }
-
-                else
-                {
-                    activo = false;
-
-                    rayo.SetActive (false); //DESTRUYE EL RAYO
-
-                }
-            }
-        }
-
-        //TOCA ESPERAR AL SIGUIENTE RAYO
-        else
-        {
-            if (tEsperaAuxiliar > 0)
-            {
-                tEsperaAuxiliar -= Time.deltaTime;
-
-                //Debug.Log("ESPERO AL SIG");
-            }
-                
-
-            else
-            {
-                tRayoAuxiliar = tiempoRayo;
-
-                activo = true;
-
-                tEsperaAuxiliar = tiempoEspera;
-            }
-        }
+    public void NoVerRayo()
+    {
+        seVeElRayo.enabled = false;
     }
 
 }
