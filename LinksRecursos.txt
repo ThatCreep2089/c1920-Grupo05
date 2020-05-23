@@ -5,3 +5,8 @@ Boss: https://opengameart.org/content/bosses-and-monsters-spritesheets-ars-notor
 FUENTES:
 Broken Glass : https://www.dafont.com/es/broken-glass.font
 Biblical: http://www.fonts101.com/fonts/view/Gothic/70462/Evil_Bible
+
+TileSet Town : http://www.pixelgameart.org | Artwork created by Luis Zuno @ansimuz
+TileSet Levels : Artwork created by Szadi art.
+Player Animations: Artwork created by Planet Centauri.
+Lava Sprite = https://craftpix.net/file-licenses/
