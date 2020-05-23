@@ -31,7 +31,7 @@ public class Stunned : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log(playerSprite.color);
+
         if(stunned)
         {
             stunCounter += Time.deltaTime;

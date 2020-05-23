@@ -16,12 +16,11 @@ public class PlayerMovement : MonoBehaviour
 	Animator anim;
 	Rigidbody2D rbParent;
 	Transform parent;
+	AudioSource audioPlayer;
 
 	float jumpCounter, slowedVelocity, savedSpeed;
 	float horizontalMovement;
 	bool isJumping = false, isInRest = false;
-
-	#region Unity Methods
 
 	void Awake()
 	{
@@ -31,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
 		rbParent = GetComponentInParent<Rigidbody2D>();
 		parent = transform.parent;
 		anim = GetComponentInParent<Animator>();
+		audioPlayer = GetComponentInParent<AudioSource>();
 	}
 
 	void Update()
@@ -77,6 +77,16 @@ public class PlayerMovement : MonoBehaviour
 		//Animacion de movimiento
 		anim.SetFloat("xMove", Mathf.Abs(horizontalMovement));
 
+		if (Mathf.Abs(horizontalMovement) > 0 && isInRest)
+		{
+			audioPlayer.enabled = true;
+		}
+
+		else
+		{
+			audioPlayer.enabled = false;
+		}
+
 		//Cambio de sentido del Sprite del jugador
 		if (Input.GetAxis("Horizontal") > 0) parent.localScale = new Vector3(1, 1, 1);
 		if (Input.GetAxis("Horizontal") < 0) parent.localScale = new Vector3(-1, 1, 1);
@@ -112,7 +122,6 @@ public class PlayerMovement : MonoBehaviour
 		if (!isJumping)
 			anim.SetBool("isFalling", true); //Si sale de una plataforma y no esta saltando, empieza la animacion de caida.
 	}
-	#endregion
 
 	#region AuxMethods
 	public void ReduceXSpeed()
