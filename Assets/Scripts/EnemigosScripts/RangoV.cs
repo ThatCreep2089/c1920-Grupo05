@@ -21,7 +21,7 @@ public class RangoV : MonoBehaviour
         gira = GetComponent<Flip>();
 		stinky = GetComponent<Stinky>();
 		anim = transform.GetComponentInParent<Animator>();
-		dragon = GetComponentInParent<Dragon>();
+        dragon = GetComponentInChildren<Dragon>();
         piston = GetComponentInParent<Pistonn>();
 	}
     //Comprobamos que tipo de enemigo es y en función de ello hacemos una cosa u otra//
