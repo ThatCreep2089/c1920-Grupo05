@@ -10,3 +10,9 @@ TileSet Town : http://www.pixelgameart.org | Artwork created by Luis Zuno @ansim
 TileSet Levels : Artwork created by Szadi art.
 Player Animations: Artwork created by Planet Centauri.
 Lava Sprite = https://craftpix.net/file-licenses/
+
+Serpiente- https://opengameart.org/content/pixel-art-cobra-sprites
+Disparo Player- https://opengameart.org/content/rotating-orbs
+vasija- https://opengameart.org/content/pots-16x16-tilemap
+explosion vasija- https://opengameart.org/content/explode-effect
+
