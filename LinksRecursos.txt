@@ -1,7 +1,7 @@
 Boton y Piston: https://www.awesometuts.com/homepage?utm_medium=video-description&utm_source=youtube.com&utm_campaign=game-dev-tutorial&utm_term=yt-audience&utm_content=tutorial
 Llamarada: https://www.spriters-resource.com/pc_computer/rpgmakermv/sheet/100404/
 Boss: https://opengameart.org/content/bosses-and-monsters-spritesheets-ars-notoria
-
+Gluplosive:https://assetstore.unity.com/packages/2d/characters/zombie-slasher-fat-zombie-monster-121244?locale=ko-KR
 FUENTES:
 Broken Glass : https://www.dafont.com/es/broken-glass.font
 Biblical: http://www.fonts101.com/fonts/view/Gothic/70462/Evil_Bible
