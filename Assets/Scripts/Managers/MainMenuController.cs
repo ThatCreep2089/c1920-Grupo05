@@ -59,7 +59,7 @@ public class MainMenuController : MonoBehaviour
 	//CUANDO SE PRESIONA EL BOTON ==> SE LLAMA A ESTE METODO
 	public void StartGame()
 	{
-		SceneManager.LoadScene("TileMap_Avaricia");
+		SceneManager.LoadScene("Transition");
 	}
 
 	public void QuitGame()

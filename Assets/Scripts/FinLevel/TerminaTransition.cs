@@ -12,11 +12,11 @@ public class TerminaTransition : MonoBehaviour
         {
             if (GameManager.instance.returncurrentLevel() == 0)
             {
-                GameManager.instance.ChangeScene("TileMap_Avaricia");
+                GameManager.instance.ChangeScene("Level1_Avaricia");
             }
             else if (GameManager.instance.returncurrentLevel() == 1)
             {
-                GameManager.instance.ChangeScene("TileMap_Gula");
+                GameManager.instance.ChangeScene("Level2_Gula");
             }
             else if (GameManager.instance.returncurrentLevel() == 2)
             {
