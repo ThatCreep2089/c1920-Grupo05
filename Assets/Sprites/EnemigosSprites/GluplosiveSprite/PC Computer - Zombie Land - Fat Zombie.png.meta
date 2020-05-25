@@ -1,0 +1,511 @@
+fileFormatVersion: 2
+guid: 100555d3637c60444a2a9e8da64ac4b7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1228010666185257737
+    second: PC Computer - Zombie Land - Fat Zombie_0
+  - first:
+      213: 6494163667665612659
+    second: PC Computer - Zombie Land - Fat Zombie_1
+  - first:
+      213: 7292603992677219500
+    second: PC Computer - Zombie Land - Fat Zombie_2
+  - first:
+      213: -7196698716750244445
+    second: PC Computer - Zombie Land - Fat Zombie_3
+  - first:
+      213: 3111795586226097364
+    second: PC Computer - Zombie Land - Fat Zombie_4
+  - first:
+      213: -8072217086932989539
+    second: PC Computer - Zombie Land - Fat Zombie_5
+  - first:
+      213: 8918642787115162870
+    second: PC Computer - Zombie Land - Fat Zombie_6
+  - first:
+      213: -3987677729884090175
+    second: PC Computer - Zombie Land - Fat Zombie_7
+  - first:
+      213: -1094276905875789876
+    second: PC Computer - Zombie Land - Fat Zombie_8
+  - first:
+      213: -6980894180196815764
+    second: PC Computer - Zombie Land - Fat Zombie_9
+  - first:
+      213: -2451381876266465065
+    second: PC Computer - Zombie Land - Fat Zombie_10
+  - first:
+      213: -282913489379261787
+    second: PC Computer - Zombie Land - Fat Zombie_11
+  - first:
+      213: -5438261158408712487
+    second: PC Computer - Zombie Land - Fat Zombie_12
+  - first:
+      213: 7302210169958353201
+    second: PC Computer - Zombie Land - Fat Zombie_13
+  - first:
+      213: -6697618776875369151
+    second: PC Computer - Zombie Land - Fat Zombie_14
+  - first:
+      213: 461652169002996215
+    second: PC Computer - Zombie Land - Fat Zombie_15
+  - first:
+      213: 4223736592257477715
+    second: PC Computer - Zombie Land - Fat Zombie_16
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 10
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PC Computer - Zombie Land - Fat Zombie_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 230
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2da49c15d789e2f429226c4ee300a219
+      internalID: -1228010666185257737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Zombie Land - Fat Zombie_1
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 230
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9952d21daba5f2742bdd7c56ba7f80f4
+      internalID: 6494163667665612659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Zombie Land - Fat Zombie_2
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 230
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7879afbf37337ea49a28bfa5fb395f6c
+      internalID: 7292603992677219500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Zombie Land - Fat Zombie_3
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 230
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a4dc3f440b6f0c48909d446e5934df7
+      internalID: -7196698716750244445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Zombie Land - Fat Zombie_4
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 154
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b76070930d098ca4b8bc5335e70442c2
+      internalID: 3111795586226097364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Zombie Land - Fat Zombie_5
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 154
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae6aad6c3a0c1224eb35ff843aeb7c4c
+      internalID: -8072217086932989539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Zombie Land - Fat Zombie_6
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 154
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06e5fa1bf6407314a9abdc56af1a1bb0
+      internalID: 8918642787115162870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Zombie Land - Fat Zombie_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 154
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42207a4428d00ee4588bda6dcefb5d0b
+      internalID: -3987677729884090175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Zombie Land - Fat Zombie_8
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 78
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fd9a478b61039e4e8002a264bdb4883
+      internalID: -1094276905875789876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Zombie Land - Fat Zombie_9
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 78
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 257efd4077e953246b682dae1d2dd867
+      internalID: -6980894180196815764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Zombie Land - Fat Zombie_10
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 78
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2037de0551be13a438171d70f70f04e5
+      internalID: -2451381876266465065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Zombie Land - Fat Zombie_11
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 78
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e14e430f4f8d5da409e3acdaef617282
+      internalID: -282913489379261787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Zombie Land - Fat Zombie_12
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 78
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 625e09d24a6e0bd45bea4b6940afc6f8
+      internalID: -5438261158408712487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Zombie Land - Fat Zombie_13
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 78
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccdadd1cab4a94b4ea1bca44b2d2b02e
+      internalID: 7302210169958353201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Zombie Land - Fat Zombie_14
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 78
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a84a28294bb6db04aa4112f802be0e3a
+      internalID: -6697618776875369151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Zombie Land - Fat Zombie_15
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 78
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f62de77b32e53342b7446b18027e843
+      internalID: 461652169002996215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Zombie Land - Fat Zombie_16
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5766283dae88d694a8ef25fc0426bd44
+      internalID: 4223736592257477715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
