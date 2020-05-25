@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
     public void ChangeScene(string name)
     {
         SceneManager.LoadScene(name);
-		if (name != "Transition") currentLevel++;
+		if (name != "Transition" && name!= "MainMenu" && name!="Cinematica") currentLevel++;
 		Time.timeScale = 1f; //Restaurar la ejecucion en caso de que esté pausado el juego.
     }
 
