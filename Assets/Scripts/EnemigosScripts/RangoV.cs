@@ -30,7 +30,8 @@ public class RangoV : MonoBehaviour
 		if (dispara != null)
 		{
 			dispara.enabled = true;
-			anim.SetBool("Atacando", true);
+			if(anim != null)
+				anim.SetBool("Atacando", true);
 		}
 		else if (moverse != null)
 		{
@@ -56,7 +57,8 @@ public class RangoV : MonoBehaviour
         if (dispara != null)
         {
             dispara.enabled = false;
-            anim.SetBool("Atacando", false);
+			if(anim!=null)
+				anim.SetBool("Atacando", false);
         }
         else if (moverse != null)
         {

@@ -15,7 +15,8 @@ public class Comida : MonoBehaviour
             contador += Time.deltaTime;
             if (contador >= TiempoSlow)
             {
-                player.GetComponentInChildren<PlayerMovement>().ResetSpeed();
+				if(player!=null)
+					player.GetComponentInChildren<PlayerMovement>().ResetSpeed();
                 Destroy(gameObject); //No se ha destruido en la colision para dejar tiempo para resetear la velocidad
             }
         }
@@ -25,16 +26,19 @@ public class Comida : MonoBehaviour
         if(collision.gameObject.GetComponent<PlayerMovement>() != null) //Comprueba que ha colisionado con el jugador
         {
             player = collision.gameObject;
-            int playerlife = player.GetComponent<Vida>().GetHealth();
-            if (playerlife + 1 <= 6) //Comprueba si la salud del jugador es la máxima o no
-            {
-                playerlife++; //En caso de que la salud del jugador no sea la máxima le suma uno de vida
-                UIManager.instance.AddCorazon(1);
-            }
-            else if(player.GetComponentInChildren<PlayerMovement>() != null)
-            {
-                player.GetComponentInChildren<PlayerMovement>().ReduceVelocidad(); //En caso de que la salud del jugador sea la máxima le reduce la velocidad
-            }
+			if(player!=null)
+			{
+				int playerlife = player.GetComponent<Vida>().GetHealth();
+				if (playerlife + 1 <= 6) //Comprueba si la salud del jugador es la máxima o no
+				{
+					playerlife++; //En caso de que la salud del jugador no sea la máxima le suma uno de vida
+					UIManager.instance.AddCorazon(1);
+				}
+				else if(player.GetComponentInChildren<PlayerMovement>() != null)
+				{
+					player.GetComponentInChildren<PlayerMovement>().ReduceVelocidad(); //En caso de que la salud del jugador sea la máxima le reduce la velocidad
+				}
+			}
         }
         gameObject.GetComponent<BoxCollider2D>().enabled = false;
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
