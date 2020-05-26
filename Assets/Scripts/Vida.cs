@@ -77,6 +77,7 @@ public class Vida : MonoBehaviour
 	#region AuxMethods
 	public void OnDead()
 	{
+
 		GameManager.instance.Morir(gameObject);
 	}
 
