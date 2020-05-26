@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class DialogoBoss : MonoBehaviour
 {
@@ -21,12 +22,14 @@ public class DialogoBoss : MonoBehaviour
 
     //Componente Text del objeto asociado.
     private Text textComp;
+	private TextMeshProUGUI textCompp;
     Animator anim;
 
     private void Awake()
     {
         textComp = GetComponentInChildren<Text>();
-        anim = GetComponentInChildren<Animator>();
+		textCompp = GetComponentInChildren<TextMeshProUGUI>();
+		anim = GetComponentInChildren<Animator>();
     }
     private void Start()
     {
@@ -47,7 +50,7 @@ public class DialogoBoss : MonoBehaviour
                 auxTexto += texto[auxTexto.Length];
                 contador -= intervaloLetras;
             }
-            textComp.text = auxTexto;
+			textCompp.text = auxTexto;
 
 
             if (auxTexto.Length == texto.Length)
