@@ -28,8 +28,10 @@ public class Vida : MonoBehaviour
         moverse = GetComponentInChildren<EnemigoToPlayer>();
 
         //animacion
-        anim = transform.GetComponent<Animator>();
-    }
+		if(gameObject.GetComponentInChildren<FlipMimico>()!=null)
+			anim = transform.GetComponentInChildren<Animator>();
+		else anim = transform.GetComponent<Animator>();
+	}
     
     public void QuitaVida(int danyo)
     {
@@ -80,6 +82,7 @@ public class Vida : MonoBehaviour
 
 	public void Infanticidio()
 	{
+
 		for (int i = 0; i < gameObject.transform.childCount; i++)
 		{
 			Destroy(gameObject.transform.GetChild(i).gameObject);

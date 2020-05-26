@@ -52,4 +52,9 @@ public class FlipMimico : MonoBehaviour
 			}
 		}
 	}
+
+	public void OnDeadMimico()
+	{
+		Destroy(gameObject.transform.parent.gameObject);
+	}
 }
