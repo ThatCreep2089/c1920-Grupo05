@@ -41,8 +41,6 @@ public class EnemigoToPlayer : MonoBehaviour
 		}
     }
     //Guardamos el transform del player para encontrar el vector director//
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        playert = collision.GetComponent<Transform>();
-    }
+    private void OnTriggerEnter2D(Collider2D collision) => playert = collision.GetComponent<Transform>();
+    
 }

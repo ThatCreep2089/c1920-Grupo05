@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class FlipMimico : MonoBehaviour
 {
@@ -8,41 +6,50 @@ public class FlipMimico : MonoBehaviour
     Transform trans;
     Animator anim;
 	EnemigoToPlayer moverse;
-    private void Awake()
+
+	float posPlayerIni, posPlayerFin;
+
+	private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
-        trans = GetComponent<Transform>();
-        anim = GetComponent<Animator>();
-        moverse = GetComponentInChildren<EnemigoToPlayer>();
+        //rb = GetComponent<Rigidbody2D>();
+        trans = gameObject.transform.parent;
+        anim = GetComponentInParent<Animator>();
+		moverse = gameObject.transform.parent.GetChild(0).GetComponent<EnemigoToPlayer>();
     }
-    //Comprueba si va hacia atrás y le da la vuelta en x//
-    private void Update()
-    {
-        //Doble condición para comprobar si está mirando para un lado o para otro//
-        if (rb.velocity.x < 0 && trans.localScale.x > 0)
-        {
-            anim.SetBool("Turn", true);
-            anim.SetBool("Walking", false);
-
-			//ARREGLAR!!!!!!!!!!!
-			if(moverse!=null)
-				moverse.enabled = false;
-        }
-
-        else if (rb.velocity.x > 0 && trans.localScale.x < 0)
-        {
-            anim.SetBool("Turn", true);
-            anim.SetBool("Walking", false);
-
-			if (moverse != null)
-				moverse.enabled = false;
-        }
-    }
+  
     public void OnFlip()
-    {
+    {	
+		//Cambio de sentido de Sprite
         trans.localScale = new Vector3(-trans.localScale.x, trans.localScale.y, trans.localScale.z);
+
+		//Vuelve a la animacion de caminar
         anim.SetBool("Turn", false);
-        moverse.enabled = true;
+		if(moverse!=null)
+			moverse.enabled = true;
+		//Camina
         anim.SetBool("Walking", true);
     }
+
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		Transform player = collision.gameObject.transform;
+
+		anim.SetBool("Walking", true);
+
+		if (player!=null)
+		{
+			posPlayerIni = player.position.x;
+
+			if (posPlayerIni > trans.position.x && trans.localScale.x > 0 || posPlayerIni < trans.position.x && trans.localScale.x < 0)
+			{
+				//Empieza la anim de giro.	
+				anim.SetBool("Turn", true);
+				//Deja la animacion de caminar
+				anim.SetBool("Walking", false);
+				//No puede caminar
+				if (moverse != null)
+					moverse.enabled = false;
+			}
+		}
+	}
 }
