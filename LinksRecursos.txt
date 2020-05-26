@@ -6,6 +6,7 @@ FUENTES:
 Broken Glass : https://www.dafont.com/es/broken-glass.font
 Biblical: http://www.fonts101.com/fonts/view/Gothic/70462/Evil_Bible
 6809 chargen: https://www.dafont.com/6809-chargen.font
+Corazones: https://opengameart.org/content/heart-3
 
 TileSet Town : http://www.pixelgameart.org | Artwork created by Luis Zuno @ansimuz
 TileSet Levels : Artwork created by Szadi art.
