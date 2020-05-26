@@ -21,13 +21,11 @@ public class DialogoBoss : MonoBehaviour
     private bool iniciarEscritura = false;
 
     //Componente Text del objeto asociado.
-    private Text textComp;
 	private TextMeshProUGUI textCompp;
     Animator anim;
 
     private void Awake()
     {
-        textComp = GetComponentInChildren<Text>();
 		textCompp = GetComponentInChildren<TextMeshProUGUI>();
 		anim = GetComponentInChildren<Animator>();
     }
