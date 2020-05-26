@@ -33,7 +33,9 @@ public class FlipMimico : MonoBehaviour
         {
             anim.SetBool("Turn", true);
             anim.SetBool("Walking", false);
-            moverse.enabled = false;
+
+			if (moverse != null)
+				moverse.enabled = false;
         }
     }
     public void OnFlip()
