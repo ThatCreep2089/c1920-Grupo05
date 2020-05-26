@@ -7,17 +7,19 @@ public class DecideTexto : MonoBehaviour
 	private void Start()
     {
         texto = GetComponent<TMPro.TextMeshProUGUI>();
-
+		
 		int nivel = GameManager.instance.returncurrentLevel();
 		if (nivel == 0)
 		{
 			string[] quotes = quotesAvaricia();
 			texto.text = quotes[Random.Range(0, quotes.Length)];
+			texto.text += "\nAvaricia";
 		}
 		else if (nivel == 1)
 		{
 			string[] quotes = quotesGula();
 			texto.text = quotes[Random.Range(0, quotes.Length)];
+			texto.text += "\nGula";
 		}
         else if (nivel == 2)
         {
@@ -29,8 +31,8 @@ public class DecideTexto : MonoBehaviour
     {
         string[] quotes =
         {
-            "Si bien lo que se busca con la avaricia es satisfacción,"+"\n"+"indefectiblemente provoca mayor infelicidad" +
-            "Proverbios 15:27"+"\n"+
+            "Si bien lo que se busca con la avaricia es satisfacción,"+"\n"+"indefectiblemente provoca mayor infelicidad" +"\n"+ 
+			"Proverbios 15:27",
             "Alborota su casa el codicioso",
             "La muerte, el sepulcro y la codicia del hombre jamás quedan satisfechos."+"\n"+" (V. también Eclesiastés 4:8.)"+"\n"+
             "Proverbios 27:20",
