@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 430895739160327283}
   - component: {fileID: 430895739160327282}
   - component: {fileID: 2566348358192232377}
+  - component: {fileID: 288099863277180409}
   m_Layer: 10
   m_Name: Vomiton
   m_TagString: Untagged
@@ -105,7 +106,7 @@ SpriteRenderer:
   m_SortingLayerID: -1848984403
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5418666645960651212, guid: 0f93400db5919c94b83047f34a98d54a,
+  m_Sprite: {fileID: -4461512985314822391, guid: 0f93400db5919c94b83047f34a98d54a,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -147,7 +148,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.8, y: 6.8}
+    oldSize: {x: 5.3, y: 6.8}
     newSize: {x: 0.58, y: 0.68}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -192,6 +193,25 @@ MonoBehaviour:
   danyo: 1
   thrust: {x: 350, y: 350}
   produceKnockBack: 1
+--- !u!95 &288099863277180409
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430895739160327286}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f6800111aca8fac4d9a26bb98194c8de, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &430895739473691791
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,6 +225,7 @@ GameObject:
   - component: {fileID: 430895739473691786}
   - component: {fileID: 430895739473691785}
   - component: {fileID: 5165565443048509186}
+  - component: {fileID: 4326676948666280672}
   m_Layer: 0
   m_Name: CampoVision
   m_TagString: Untagged
@@ -288,6 +309,18 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430895739473691791}
   m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e831ec6748760b4fab94cfd9172c78e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4326676948666280672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430895739473691791}
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e831ec6748760b4fab94cfd9172c78e, type: 3}
   m_Name: 
