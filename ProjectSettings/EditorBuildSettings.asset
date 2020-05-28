@@ -5,12 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Game/Cinematic_Video.unity
-    guid: 25ab89d6206470d44a9ca30a3d768d90
+    guid: f259d33043bc55d4db2e035722b49282
   - enabled: 1
     path: Assets/Scenes/Game/Main Menu.unity
     guid: dc1b841584961c648bdc5907f0af56d0

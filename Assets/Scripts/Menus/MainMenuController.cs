@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement; //IMPORTANATE
 public class MainMenuController : MonoBehaviour
 {
 	[SerializeField] float time = 0f;
-	GameObject play, settings, quit;
+	GameObject play, settings, creditos, quit;
 	Animator anim;
 	float timer;
 
@@ -18,7 +18,8 @@ public class MainMenuController : MonoBehaviour
 
 		play = transform.GetChild(3).gameObject;
 		settings = transform.GetChild(4).gameObject;
-		quit = transform.GetChild(5).gameObject;
+		creditos = transform.GetChild(5).gameObject;
+		quit = transform.GetChild(6).gameObject;
 	}
 
 	private void Start()
@@ -47,6 +48,7 @@ public class MainMenuController : MonoBehaviour
 				//Activamos los botones
 				play.SetActive(true);
 				settings.SetActive(true);
+				creditos.SetActive(true);
 				quit.SetActive(true);
 
 				timer = time;
@@ -60,6 +62,7 @@ public class MainMenuController : MonoBehaviour
 	public void StartGame()
 	{
 		SceneManager.LoadScene("Transition");
+		Time.timeScale = 1f; //Restaurar la ejecucion en caso de que esté pausado el juego.
 	}
 
 	public void QuitGame()

@@ -1,15 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.Video;
+using UnityEngine.SceneManagement;
 
 public class VideoController : MonoBehaviour
 {
 	VideoPlayer video;
-	GameManager gM;
 	private void Awake()
 	{
 		video = GetComponent<VideoPlayer>();
-
-		gM = GameManager.instance;
 	}
 
 	private void Update()
@@ -17,8 +15,7 @@ public class VideoController : MonoBehaviour
 		if(video.isPrepared && !video.isPlaying)
 		{
 			//cambio de escenas
-			if(gM!=null)
-				gM.ChangeScene("Main Menu");
+			SceneManager.LoadScene("Main Menu");
 		}
 		
 	}
