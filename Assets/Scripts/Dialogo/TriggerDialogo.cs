@@ -2,9 +2,10 @@
 
 public class TriggerDialogo : MonoBehaviour
 {
-    [SerializeField] Animator anim;
+    [SerializeField] Animator anim = null;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        anim.SetBool("IsOpen", true);
+		if(anim!=null)
+			anim.SetBool("IsOpen", true);
     }
 }

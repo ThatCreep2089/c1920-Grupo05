@@ -1,23 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+
 
 public class Boss : MonoBehaviour
 {
-    private Transform spawnerDeArriba;
-    private Transform spawnerDeAbajo;
-    private Transform spawnerIzArriba;
-    private Transform spawnerIzAbajo;
+    Transform spawnerDeArriba,spawnerDeAbajo, spawnerIzArriba, spawnerIzAbajo;
 
     public float velocidadProyectil = 5;
     public GameObject proyectil;
     public GameObject player;
+	GameManager gM;
 
     public float tiempoEspera;
-    private float tiempoAux;
+    float tiempoAux;
 
-    private bool espera;
 
+	Vida vidaBoss;
     void Awake ()
     {
         spawnerDeArriba = gameObject.transform.GetChild(0);
@@ -26,7 +23,8 @@ public class Boss : MonoBehaviour
         spawnerIzAbajo = gameObject.transform.GetChild(3);
 
         tiempoAux = tiempoEspera;
-        espera = true;
+		gM = GameManager.instance;
+		vidaBoss = GetComponent<Vida>();
     }
 
     // Update is called once per frame
@@ -40,6 +38,13 @@ public class Boss : MonoBehaviour
             tiempoEspera = tiempoAux;
         }
 
+		if(vidaBoss.GetHealth()<=0)
+		{
+			if(gM!=null)
+			{
+				gM.ChangeScene("Creditos");
+			}
+		}
         
 
     }

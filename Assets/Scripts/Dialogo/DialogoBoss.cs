@@ -7,7 +7,7 @@ using TMPro;
 public class DialogoBoss : MonoBehaviour
 {
     //Texto a mostrar en pantalla.
-    [SerializeField] [TextArea] string texto;
+    [SerializeField] [TextArea] string texto = "";
     //Tiempo en segundos entre la aparición de una letra y la siguiente.
     [SerializeField] [Range(0.001f, 0.1f)] float intervaloLetras;
 
