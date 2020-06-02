@@ -38,9 +38,10 @@ public class GameManager : MonoBehaviour
 
     public void ChangeScene(string name)
     {
+		if (name != "Transition" && name!= "Main Menu" && name!= "Cinematic_Video") currentLevel++;
+        if (name == "Main Menu") currentLevel = 0;
         SceneManager.LoadScene(name);
-		if (name != "Transition" && name!= "Main Menu" && name!= "Cinematic_Video" && name != "Creditos") currentLevel++;
-		Time.timeScale = 1f; //Restaurar la ejecucion en caso de que esté pausado el juego.
+        Time.timeScale = 1f; //Restaurar la ejecucion en caso de que esté pausado el juego.
     }
 
     public void LevelFinished(bool playerWins)
